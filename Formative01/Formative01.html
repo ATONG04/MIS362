@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+    <title>MIS362 Formative01</title>
+</head>
+
+<body class="container-fluid">
+
+<form class="container-fluid" action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" method="post" name="frmAssignment" id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+     <!--   <input name="assignmentVersion" id="assignmentVersion" value="Formative01-FA2026-v3" type="hidden"> -->
+        <textarea id="datasetContext"
+                  name="datasetContext"
+                  readonly
+                  hidden>Dataset: SmartBean purchasing options. The workbook contains 30 purchasing options grouped by comparable product type. Columns include Option ID, Group, Item or Option Description, Package Quantity, Unit of Measure, Package Cost, Standardized Quantity, Unit Cost, and Value Rank. Conversion factors are supplied in the workbook. Students should compare only rows in the same Group. Accept multiple valid Excel approaches, including sorting, filtering, manual ranking, ranking formulas, conditional formatting, helper formulas, tables, or another accurate and clearly explained method. Do not require one specific Excel function. Evaluate calculation accuracy, method explanation, verification, interpretation, and business reasoning separately.</textarea>
+
+        <h1 class="text-center">From Data to Information: SmartBean Purchasing</h1>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="FirstName">First Name:</label>
+                    <input class="form-control" name="FirstName" id="FirstName" type="text"
+                        readonly aria-readonly="true" autocomplete="given-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="LastName">Last Name:</label>
+                    <input class="form-control" name="LastName" id="LastName" type="text"
+                        readonly aria-readonly="true" autocomplete="family-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="StarID">StarID:</label>
+                    <input class="form-control" name="StarID" id="StarID" type="text"
+                        readonly aria-readonly="true" autocomplete="username">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input class="form-control" name="email" id="email" type="email"
+                        readonly aria-readonly="true" autocomplete="email">
+                </div>
+            </div>
+        </div>
+
+        <input name="pin" id="pin" type="hidden">
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Semester">Semester:</label>
+                    <input class="form-control" name="Semester" id="Semester" type="text"
+                        readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Class">Class:</label>
+                    <input class="form-control" name="Class" id="Class" type="text"
+                        readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Section">Section:</label>
+                    <input class="form-control" name="Section" id="Section" type="text"
+                        readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="assignment">Assignment:</label>
+                    <input class="form-control" name="assignment" id="assignment" type="text"
+                        value="Formative01" readonly aria-readonly="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit to the web database, and receive AI feedback" type="submit">
+            <br>
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            120 Points
+       
+           
+
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a>
+        </div>
+        <div id="Objectives" class="collapse in col-lg-12">
+            <p>
+                In this assignment, you will use Excel to transform raw purchasing data into useful information, compare alternatives, and support a SmartBean purchasing decision.
+            </p>
+
+            <p>After completing this assignment, you will be able to:</p>
+
+            <ol>
+                <li>Differentiate raw data from information used to support a business decision.</li>
+                <li>Standardize quantities expressed in different units of measure.</li>
+                <li>Calculate and compare unit costs within appropriate product groups.</li>
+                <li>Select and justify a reasonable Excel method for identifying the best value.</li>
+                <li>Verify the results and develop an evidence-based purchasing recommendation.</li>
+            </ol>
+
+            </div>
+
+
+            <div class="col-lg-12">
+                <a href="#Resources" class="btn btn-info" data-toggle="collapse">Resources and Help</a>
+            </div>
+            <div id="Resources" class="collapse in col-lg-12">
+                <p>
+                    You may use any reasonable Excel method that produces an accurate and understandable result. Possible approaches include formulas, helper columns, sorting, filtering, ranking functions, or an Excel table.
+           
+                </p>
+
+                <p>
+                    You are not required to use one specific method. Be prepared to explain
+    what method you selected, why it works, and how you verified the result.
+           
+                </p>
+                <p>
+                    Suggested course-agent prompt:
+           
+               
+
+                    <br>
+                    <code>I am completing MIS362 Formative01. Explain the concept I need to understand, then show a simple Excel solution and a more advanced solution when appropriate. You may provide exact formulas, but explain each formula and tell me how to verify the result. Do not assume there is only one correct method. 
+                    </code>
+                </p>
+
+                <p>
+                    <strong>Alternative methods are acceptable:</strong> The AI feedback should not penalize you
+                    for using a different Excel method when your result is accurate, clearly explained, and verified.
+                    Sorting, filtering, manual ranking, ranking formulas, conditional formatting, helper formulas,
+                    Excel tables, or another reasonable method may all be valid.
+                </p>
+<p>
+                    <strong>For useful AI feedback:</strong> Do not answer with only a final number.
+                    Include the relevant Option ID, source values, formula or method, result, and a brief explanation.
+                </p>
+                
+                <p>
+                    <strong>The AI feedback will evaluate:</strong>
+                </p>
+                <ul>
+                    <li>whether your calculations and reported values are accurate;</li>
+                    <li>whether your Excel method is reasonable and clearly explained;</li>
+                    <li>whether you verified your work;</li>
+                    <li>whether your interpretation and recommendation follow from the evidence;</li>
+                    <li>whether your business reasoning recognizes limits beyond price alone.</li>
+                </ul>
+
+                <p>
+                    The AI does not automatically receive your completed Excel workbook. Your written answers must include
+                    the specific evidence needed to evaluate your reasoning.
+                </p>
+                <p>
+                    Verify any formula or AI-generated suggestion by checking at least one calculation manually.
+       
+           
+                </p>
+                <hr>
+            </div>
+
+            <div class="col-lg-12">
+                <a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a>
+            </div>
+            <div id="Overview" class="collapse in col-lg-12">
+                <p>
+                    SmartBean is comparing 30 purchasing options across several product groups, including
+            coffee beans, tea, syrup, sugar, cups, lids, milk, muffins, napkins, cleaning supplies,
+            and stirrers. Suppliers list quantities using pounds, ounces, grams, quarts,
+            fluid ounces, liters, milliliters, and counts.
+       
+           
+                </p>
+                <p>
+                    Package cost alone does not provide enough information to identify the best value.
+            You must standardize comparable quantities, calculate unit cost, compare only like
+            items, and explain the limitations of the result.
+       
+           
+                </p>
+                <p>You will use these Excel features:</p>
+                <ol>
+                    <li>Workbook and worksheet navigation.</li>
+                    <li><code>Ctrl + Home</code> and <code>Ctrl + End</code> to determine a worksheet size and organization.</li>
+                    <li>Simple multiplication and division formulas.</li>
+                    <li>Relative cell references and Fill Down.</li>
+                    <li><code>Ctrl + `</code> to switch between values and formulas.</li>
+                    <li>Currency and decimal number formats.</li>
+                    <li>Grouping, sorting, filtering, conditional formatting, and ranking comparable purchase options.</li>
+                    <li>Explaining how spreadsheet output becomes information for a management decision.</li>
+                </ol>
+                <h3>Connection to Summative</h3>
+                <p>
+                    This assignment develops spreadsheet and information-literacy skills so you better understand
+                Summative01, which discusses how organizations combine people, processes,
+                data, and technology to create useful information. This spreadsheet demonstrates that
+                raw prices and package sizes do not become useful information until a person defines the
+                decision, applies a process, verifies the calculations, and interprets the output.
+           
+                </p>
+                <hr>
+            </div>
+
+            <div class="col-lg-12">
+                <a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1 — Open and Inspect the Data</a>
+            </div>
+            <div id="Exercise01" class="collapse in col-lg-12">
+                <ol>
+                    <li>Download and open <a href="Data.xlsx" class="bg-info text-white">Data.xlsx</a>.</li>
+                    <li>Save a working copy as <strong>Formative01.xlsx</strong> in the course folder specified by your instructor.</li>
+                    <li>Open the <strong>SmartBean Data</strong> worksheet.</li>
+                    <li>Press <code>Ctrl + End</code> and then <code>Ctrl + Home</code>.</li>
+                    <li>Identify the raw-data columns, the Group column, and the three blank calculated columns.</li>
+                    <li>Open the <strong>Conversion Reference</strong> worksheet.</li>
+                </ol>
+
+                <div class="form-group">
+                <label for="q1"><strong>(10) Question 1</strong></label>
+                <textarea class="form-control"
+                          id="q1"
+                          name="q1"
+                          rows="6"
+                          readonly
+                          aria-readonly="true">
+The SmartBean workbook contains 30 purchasing options organized into product Groups. 
+Raw-data columns include Option ID, Group, item description, package quantity, unit of measure, and package cost.
+Calculated columns are Standardized Quantity, Unit Cost, and Value Rank. 
+Consider what must be organized or calculated before SmartBean can compare the options fairly.
+In your answer, distinguish raw data from useful information and briefly explain why comparisons must remain within the same Group.</textarea>
+                <br>
+                <label for="a1"><strong>Your answer:</strong></label>
+
+
+                <textarea class="form-control"
+                          id="a1"
+                          name="a1"
+                          rows="8"
+                          maxlength="3000"
+                          placeholder="Type or paste your answer here..."></textarea>
+                <small id="charCount-a1" class="text-muted">Maximum: 3000 characters. Include the requested evidence, exact values, formulas, verification, and explanation so the AI can provide useful feedback.</small>
+                <br>
+            </div>
+            </div>
+
+            <div class="col-lg-12">
+                <a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2 — Standardize the Quantities</a>
+            </div>
+            <div id="Exercise02" class="collapse in col-lg-12">
+                <ol>
+                    <li>Use the Conversion Reference worksheet to determine the correct conversion factor.</li>
+                    <li>In the <strong>Standardized Quantity</strong> column, enter formulas that convert:
+               
+                   
+
+                        <ul>
+                            <li>pounds and grams to ounces;</li>
+                            <li>quarts to fluid ounces;</li>
+                            <li>ounces, fluid ounces, and count using a factor of 1.</li>
+                        </ul>
+                    </li>
+                    <li>Use Fill Down when the same formula pattern can be reused.</li>
+                    <li>Format the standardized quantities to display two decimal places.</li>
+                </ol>
+
+                <div class="form-group">
+                <label for="q2"><strong>(10) Question 2</strong></label>
+                <textarea class="form-control"
+                          id="q2"
+                          name="q2"
+                          rows="7"
+                          readonly
+                          aria-readonly="true">
+Select one workbook row that requires a unit conversion. 
+Identify the Option ID, original package quantity and unit, conversion factor, and resulting Standardized Quantity. 
+In your answer briefly explain why converting comparable products to a common unit is necessary before package costs can be compared.
+</textarea>
+                <br>
+                <label for="a2"><strong>Your answer:</strong></label>
+                <textarea class="form-control"
+                          id="a2"
+                          name="a2"
+                          rows="8"
+                          maxlength="3000"
+                          placeholder="Type or paste your answer here..."></textarea>
+                <small id="charCount-a2" class="text-muted">Maximum: 3000 characters. Include the requested evidence, exact values, formulas, verification, and explanation so the AI can provide useful feedback.</small>
+                <br>
+            </div>
+            </div>
+
+            <div class="col-lg-12">
+                <a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3 — Calculate Unit Cost</a>
+            </div>
+            <div id="Exercise03" class="collapse in col-lg-12">
+                <p>
+                    <strong>How to report a formula:</strong> Include both forms when appropriate.
+                </p>
+                <ul>
+                    <li><strong>Excel formula:</strong> for example, <code>=F5/G5</code></li>
+                    <li><strong>Formula in words:</strong> Package Cost divided by Standardized Quantity</li>
+                </ul>
+                <p>
+                    Your row and column letters may differ. The important requirement is that the formula
+                    uses the correct cells and that you explain what the formula calculates.
+                </p>
+
+                <ol>
+                    <li>In the <strong>Unit Cost</strong> column, divide Package Cost by Standardized Quantity.</li>
+                    <li>Use Fill Down to apply the formula to the remaining rows.</li>
+                    <li>Format Unit Cost as currency with four decimal places.</li>
+                    <li>Press <code>Ctrl + `</code> to display formulas and inspect them.</li>
+                    <li>Press <code>Ctrl + `</code> again to return to values.</li>
+                    <li>Manually verify at least one unit-cost calculation.</li>
+                </ol>
+
+                <div class="form-group">
+                <label for="q3"><strong>(10) Question 3</strong></label>
+                <textarea class="form-control"
+                          id="q3"
+                          name="q3"
+                          rows="7"
+                          readonly
+                          aria-readonly="true">
+Select one purchasing option and document your Unit Cost calculation. 
+Include the Option ID, Package Cost, Standardized Quantity, the exact Excel formula you used, the same formula written in words, and the resulting Unit Cost. 
+In your answer briefly explain how you manually verified the result and how you checked that Fill Down or copied formulas used the correct cell references.</textarea>
+                <br>
+                <label for="a3"><strong>Your answer:</strong></label>
+                <textarea class="form-control"
+                          id="a3"
+                          name="a3"
+                          rows="8"
+                          maxlength="3000"
+                          placeholder="Type or paste your answer here..."></textarea>
+                <small id="charCount-a3" class="text-muted">Maximum: 3000 characters. Include the requested evidence, exact values, formulas, verification, and explanation so the AI can provide useful feedback.</small>
+                <br>
+            </div>
+            </div>
+
+            <div class="col-lg-12">
+                <a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4 — Compare Like Items</a>
+            </div>
+            <div id="Exercise04" class="collapse in col-lg-12">
+                <p>
+                    The <strong>Group</strong> column identifies which purchasing options are reasonably comparable.
+                For example, all coffee-bean options belong to the Coffee Beans group, while cups belong to
+                the Cups group. Do not compare unit costs across unrelated groups.
+           
+                </p>
+
+                <p>You may explore value ranking in several reasonable ways:</p>
+                <ol>
+                    <li>
+                        <strong>Sort or filter by Group and Unit Cost.</strong>
+                        Filter one group at a time, or sort first by Group and then by Unit Cost from smallest
+                    to largest. The lowest unit cost in each group is a possible best-value option.
+                </li>
+                    <li>
+                        <strong>Use the Value Rank column.</strong>
+                        Enter ranks manually after sorting, or use a ranking formula that compares each row only
+                    with rows in the same Group. A rank of 1 should represent the lowest unit cost in the group.
+                </li>
+                    <li>
+                        <strong>Use conditional formatting or a helper formula.</strong>
+                        Highlight the lowest Unit Cost within a group, or create a formula that labels a row
+                   
+                        <em>Best Value</em> when its Unit Cost is the group minimum.
+                </li>
+                </ol>
+
+                <p>
+                    These are examples, not the only acceptable methods. You may use another Excel approach
+                that produces an accurate, understandable, and verifiable result.
+           
+                </p>
+
+                <ol>
+                    <li>Compare only options assigned to the same Group.</li>
+                    <li>Use one reasonable method to identify the best value within each group.</li>
+                    <li>Check that your method does not rank unrelated products together.</li>
+                    <li>Review whether quality, storage, spoilage, vendor reliability, sustainability, or minimum order quantity could affect the final decision.</li>
+                </ol>
+
+                <div class="form-group">
+                <label for="q4"><strong>(10) Question 4</strong></label>
+                <textarea class="form-control"
+                          id="q4"
+                          name="q4"
+                          rows="9"
+                          readonly
+                          aria-readonly="true">
+Choose one SmartBean product Group containing comparable options. 
+Report the Option IDs and calculated Unit Cost for each option in that Group. 
+Review the Excel method you used to identify value—such as sorting and filtering, a Value Rank formula, conditional formatting, a helper formula, or another reasonable method. 
+In your answer identify the best-value option, explain why the method is valid, describe how you verified the result, and name one non-price factor management should consider before purchasing it.</textarea>
+                <br>
+                <label for="a4"><strong>Your answer:</strong></label>
+                <textarea class="form-control"
+                          id="a4"
+                          name="a4"
+                          rows="8"
+                          maxlength="3000"
+                          placeholder="Type or paste your answer here..."></textarea>
+                <small id="charCount-a4" class="text-muted">Maximum: 3000 characters. Include the requested evidence, exact values, formulas, verification, and explanation so the AI can provide useful feedback.</small>
+                <br>
+            </div>
+            </div>
+
+            <div class="col-lg-12">
+                <a href="#Exercise05" class="btn btn-info" data-toggle="collapse">Exercise 5 — Interpret the Spreadsheet as an Information System</a>
+            </div>
+            <div id="Exercise05" class="collapse in col-lg-12">
+                <p>
+                    Review the spreadsheet as a simple information system:
+       
+           
+                </p>
+                <ul>
+                    <li><strong>Inputs:</strong> item names, package quantities, units, and package costs.</li>
+                    <li><strong>Processes:</strong> conversions, formulas, formatting, comparison, and verification.</li>
+                    <li><strong>Outputs:</strong> standardized quantities, unit costs, rankings, and purchasing information.</li>
+                    <li><strong>Feedback:</strong> updated prices, corrected data, revised formulas, and management review.</li>
+                </ul>
+
+                <div class="form-group">
+                <label for="q5"><strong>(10) Question 5</strong></label>
+                <textarea class="form-control"
+                          id="q5"
+                          name="q5"
+                          rows="8"
+                          readonly
+                          aria-readonly="true">
+Consider the completed SmartBean workbook as an information system. 
+Identify its important inputs, processes, outputs, feedback, and at least one control used to improve accuracy.
+Recommend one specific improvement—such as adding quality ratings, vendor reliability, delivery time, storage limits, sustainability information, or automated error checks- and in your answer briefly explain how that improvement would support a better purchasing decision.</textarea>
+                <br>
+                <label for="a5"><strong>Your answer:</strong></label>
+                <textarea class="form-control"
+                          id="a5"
+                          name="a5"
+                          rows="8"
+                          maxlength="3000"
+                          placeholder="Type or paste your answer here..."></textarea>
+                <small id="charCount-a5" class="text-muted">Maximum: 3000 characters. Include the requested evidence, exact values, formulas, verification, and explanation so the AI can provide useful feedback.</small>
+                <br>
+            </div>
+            </div>
+
+            <div class="col-lg-12">
+                <a href="#Evidence" class="btn btn-info" data-toggle="collapse">Completion Evidence</a>
+            </div>
+            <div id="Evidence" class="collapse in col-lg-12">
+                <p>
+                    Before submitting, confirm that the completed workbook visibly shows:
+       
+           
+                </p>
+                <ul>
+                    <li>formulas or calculated values in Standardized Quantity and Unit Cost, plus a visible method for Value Rank;</li>
+                    <li>appropriate number formats;</li>
+                    <li>a method that identifies the best value within each Group without comparing unrelated products;</li>
+                    <li>no formula errors such as <code>#DIV/0!</code>, <code>#VALUE!</code>, or <code>#REF!</code>.</li>
+                </ul>
+                <hr>
+            </div>
+
+            <div class="col-lg-12">
+                <a href="#D2LSubmission" class="btn btn-info" data-toggle="collapse">D2L Workbook Submission</a>
+            </div>
+            <div id="D2LSubmission" class="collapse in col-lg-12">
+                <p>
+                    Save the completed workbook as <strong>Formative01.xlsx</strong>.
+       
+           
+                </p>
+                <p>
+                    <strong>(50) Upload <code>Formative01.xlsx</code> to the D2L
+           
+                   
+
+                        <code>Formative01</code> assignment folder.</strong>
+                </p>
+                <hr>
+            </div>
+
+            <div class="col-lg-12">
+                <a href="#WebSubmission" class="btn btn-info" data-toggle="collapse">Webpage Submission</a>
+            </div>
+            <div id="WebSubmission" class="collapse in col-lg-12">
+                <p>
+                    Publish the completed webpage and verify that it is linked from your course home page.
+       
+           
+                </p>
+                <p><strong>(10) Home Page Hyperlink:</strong> Verify that the assignment link works.</p>
+                <p><strong>(10) Webpage Submission:</strong> Press the <strong>Submit for instant AI feedback</strong> button at the top or bottom of this page.</p>
+                <p>
+                    The AI receives each numbered question together with your corresponding answer.
+                    Include the requested Option IDs, values, formulas, methods, and explanations in your answers.
+                    Review the feedback, correct errors in the Excel workbook or written responses, and resubmit as needed.
+                </p>
+                <hr>
+            </div>
+
+            <div class="col-lg-12">
+                <br>
+                <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit to the web database, and receive AI feedback" type="submit">
+                <br>
+            </div>
+    </form>
+
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+
+    <script>
+    (function () {
+        function updateCount(id, max) {
+            var box = document.getElementById(id);
+            var count = document.getElementById('charCount-' + id);
+            if (!box || !count) { return; }
+            count.textContent = box.value.length + ' / ' + max + ' characters';
+        }
+
+        for (var i = 1; i <= 5; i++) {
+            (function (id) {
+                var box = document.getElementById(id);
+                if (!box) { return; }
+                var max = parseInt(box.getAttribute('maxlength'), 10) || 3000;
+                updateCount(id, max);
+                box.addEventListener('input', function () {
+                    updateCount(id, max);
+                });
+            })('a' + i);
+        }
+    })();
+    </script>
+
+</body>
+</html>
