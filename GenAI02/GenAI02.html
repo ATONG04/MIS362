@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<link href="../../ReadOnly/bootstrap.css" rel="stylesheet"/>
+<title>MIS362 GenAI02 — Hermes Agent Student Profile Installation and Verification</title>
+<style>
+    body { padding-bottom: 3rem; line-height: 1.55; }
+    h1, h2, h3 { margin-top: 1.25rem; }
+    .callout { border-left: 5px solid #31708f; background: #f5fbfd; padding: 1rem; margin: 1rem 0; }
+    .callout-warning { border-left-color: #8a6d3b; background: #fcf8e3; }
+    .callout-danger { border-left-color: #a94442; background: #f2dede; }
+    .callout-success { border-left-color: #3c763d; background: #dff0d8; }
+    .template-box { border: 2px solid #999; padding: 1rem; margin: 1rem 0 2rem 0; background: #fff; }
+    .artifact-placeholder { border: 2px dashed #777; padding: 1.25rem; margin: 0.75rem 0; text-align: center; font-weight: bold; color: #555; }
+    .small-note { font-size: 0.95rem; color: #555; }
+    pre { white-space: pre-wrap; background: #f7f7f7; border: 1px solid #ddd; padding: 1rem; }
+    table th { background: #f5f5f5; }
+</style>
+</head>
+<body class="container-fluid">
+<form action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" class="container-fluid" id="frmAssignment" method="post" name="frmAssignment">
+<input id="InstID" name="InstID" type="hidden" value="00617282"/>
+<input id="assignmentVersion" name="assignmentVersion" type="hidden" value="GenAI02-FA2026-v9"/>
+<input id="reflectionQuestion" name="reflectionQuestion" type="hidden" value="1"/>
+<textarea hidden="" id="datasetContext" name="datasetContext" readonly="">MIS362 GenAI02. Evaluate the final reflection about installing and verifying the Student Hermes Starter Kit v2.0.5. The student should explain what the Docker container isolates, what remains outside that isolation boundary, and how a course-specific profile, bounded local workspace, separate OneDrive source, approval requirements, and status verification reduce risk. The required artifact is graded separately. Do not reward disclosure of credentials, private paths, or other sensitive information.</textarea>
+<h1 class="text-center">Hermes Agent Student Profile<br> Installation and Verification</h1>
+<h2 class="sr-only" id="student-info">Student Information</h2>
+<div aria-labelledby="student-info" class="row">
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="FirstName">First Name:</label>
+<input aria-readonly="true" autocomplete="given-name" class="form-control" id="FirstName" name="FirstName" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="LastName">Last Name:</label>
+<input aria-readonly="true" autocomplete="family-name" class="form-control" id="LastName" name="LastName" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="StarID">StarID:</label>
+<input aria-readonly="true" autocomplete="username" class="form-control" id="StarID" name="StarID" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="email">Email:</label>
+<input aria-readonly="true" autocomplete="email" class="form-control" id="email" name="email" readonly="" type="email"/>
+</div></div>
+</div>
+<input id="pin" name="pin" type="hidden"/>
+<h2 class="sr-only" id="course-info">Course Information</h2>
+<div aria-labelledby="course-info" class="row">
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="Semester">Semester:</label>
+<input aria-readonly="true" class="form-control" id="Semester" name="Semester" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="Class">Class:</label>
+<input aria-readonly="true" class="form-control" id="Class" name="Class" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="Section">Section:</label>
+<input aria-readonly="true" class="form-control" id="Section" name="Section" readonly="" type="text"/>
+</div></div>
+<div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+<label for="assignment">Assignment:</label>
+<input aria-readonly="true" class="form-control" id="assignment" name="Assignment" readonly="" type="text" value="GenAI02"/>
+</div></div>
+</div>
+<div class="col-lg-12">
+<br/>
+<input class="btn btn-danger btn-block btn-lg" name="Submit" type="submit" value="Submit to the web database and receive AI feedback"/>
+<br/>
+</div>
+<div class="col-lg-12 h3 text-danger">100 Points: 50 Artifact + 50 Reflection<hr/></div>
+<div class="col-lg-12">
+<a aria-controls="Overview" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Overview">Assignment Overview</a>
+</div>
+<div class="collapse in col-lg-12" id="Overview">
+<p>This assignment is synchronized with Summative02. You will use <strong>Student Hermes Starter Kit v2.0.7</strong> to install and verify a terminal-based Hermes Agent profile for MIS362. The starter kit creates the profile, bounded course workspace, Docker isolation, inference configuration, shortcuts, and verification workflow.</p>
+<p><strong>This week:</strong> install the kit, check its status, confirm Hermes opens, and submit one status screenshot plus your reflection. Use <code>openrouter/free</code>. No purchase, server/VPN connection, PDF knowledge setup, or model switching is required.</p>
+<p>The <a href="GenAI02_Hermes_Setup_Verification_Template.md" target="_blank">setup verification checklist</a> is optional. Use it in Notepad if helpful; it is not a separate submission.</p>
+<div class="callout callout-warning"><strong>Dependency:</strong> GenAI03 through GenAI09 require that the <code>mis362hermes</code> profile, <code>mis362hermes</code> workspace, Docker security baseline, and OpenRouter configuration are ready. This assignment checks installation and Docker. A successful status screen alone does not establish that a model response or Hermes tool call has succeeded.</div>
+<div class="callout"><strong>Student environment:</strong> v2.0.7 uses <code>mis362hermes</code> for both the Hermes profile and its local workspace root. The OneDrive source also uses <code>mis362hermes</code>. The parent folders distinguish them: <code>OneDrive - Minnesota State\mis362hermes</code> is the source; <code>Hermes_Workspaces\mis362hermes\course</code> is the working copy.</div>
+<div class="callout callout-warning"><strong>Use the course PowerShell workflow.</strong> Start Hermes through the Daily Menu, opened by the <code>MIS362 Student Hermes</code> shortcut or the installed <code>000_Student_Setup.cmd</code>.</div>
+<div class="callout callout-danger"><strong>Stop if the profile or workspace is wrong.</strong> For this assignment, the status screen must show profile <code>mis362hermes</code> and the course workspace under <code>Hermes_Workspaces\mis362hermes</code>. Do not continue in the default profile, another course profile, Downloads, OneDrive, or the course website folder.</div>
+<hr/>
+</div>
+
+<div class="col-lg-12">
+<a aria-controls="Objectives" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Objectives">Learning Objectives</a>
+</div>
+<div class="collapse in col-lg-12" id="Objectives">
+<ul>
+<li>Configure the reusable student and course identifiers for a course-specific Hermes profile.</li>
+<li>Install Hermes Agent through a controlled PowerShell workflow.</li>
+<li>Separate the authoritative OneDrive source from the bounded Hermes working copy.</li>
+<li>Configure OpenRouter without placing credentials in course files or assignment evidence.</li>
+<li>Verify the profile, workspace, Hermes version, Docker engine, provider, model, and security baseline.</li>
+<li>Explain why isolation and verification matter when an organization deploys AI agents.</li>
+</ul>
+<hr/>
+</div>
+
+<div class="col-lg-12">
+<a aria-controls="Prerequisites" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Prerequisites">Before You Begin</a>
+</div>
+<div class="collapse in col-lg-12" id="Prerequisites">
+<h2>Required computer and accounts</h2>
+<ul>
+<li>Windows 11, 64-bit, fully updated and restarted.</li>
+<li>PowerShell 7.6 or newer. Use <code>pwsh</code>, not Windows PowerShell 5.1 or PowerShell ISE.</li>
+<li>At least 16 GB RAM, a 512 GB SSD, and at least 25 GB free space.</li>
+<li>Hardware virtualization enabled (<a href="hwvrit.png">Task Manager, CPU</a>) and <a href="wsl.png">WSL 2</a> installed and current.</li>
+<li>Docker Desktop installed and running with <strong>Settings &gt; General &gt; Choose how to run Docker containers&nbsp; </strong> having&nbsp;  <strong>&#39;WSL2&#39; </strong>selected. Resolve prerequisite installation with the instructor or university support before class setup.</li>
+<li>OneDrive - Minnesota State signed in and synchronized.</li>
+<li>An OpenRouter account and an API key that can access the free router.</li>
+<li>Student Hermes Starter Kit v2.0.7 supplied by the instructor.</li>
+</ul>
+<h2>WSL 2 requirement</h2>
+<p>WSL 2 supplies the real Linux kernel and lightweight virtualization layer used by the Docker Desktop Linux engine. Docker uses that layer to run the isolated Linux container used by Hermes terminal and code tools. </p>
+<p>You do not need to install or open a separate Ubuntu distribution. PowerShell 7 and Hermes run on Windows. Docker supplies the isolated Linux Python, Node.js, and shell environment.</p>
+<h2>Quick prerequisite checks</h2>
+<p>Open <strong>PowerShell 7</strong> and run:</p>
+<pre>$PSVersionTable.PSVersion
+wsl --version
+wsl --status
+docker version
+docker info --format '{{.OSType}}'</pre>
+<ul>
+<li>The PowerShell version must be 7.6 or newer.</li>
+<li><code>wsl --version</code> must report a WSL package version of 2.1.5 or newer. This is different from a distribution being configured as WSL 1 or WSL 2.</li>
+<li>Docker Desktop must be open, <code>docker version</code> must reach the Docker server, and the final command must return <code>linux</code>.</li>
+</ul>
+<p>If WSL 2 is missing or requires a Windows feature change, stop and follow the instructor or university-support procedure. Enabling WSL 2 can require Administrator approval and a restart; do not make unapproved system changes. If Docker Desktop has a first-run agreement or configuration screen, complete it and wait until the engine is running. Do not continue while a prerequisite is failing.</p>
+<hr/>
+</div>
+
+<div class="col-lg-12">
+<a aria-controls="CourseSource" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#CourseSource">Create the OneDrive Course Source</a>
+</div>
+<div class="collapse in col-lg-12" id="CourseSource">
+<p>The authoritative source folder follows this reusable naming rule:</p>
+<pre>OneDrive - Minnesota State\&lt;coursecode&gt;hermes</pre>
+<p>For this assignment, <code>CourseCode</code> is <code>MIS362</code>. The starter kit converts it to lowercase and derives:</p>
+<pre>C:\Users\&lt;StarID&gt;\OneDrive - Minnesota State\mis362hermes</pre>
+<ol>
+<li>Use File Explorer to create <code>mis362hermes</code> inside <code>OneDrive - Minnesota State</code> if it does not already exist.</li>
+<li>If course files are supplied, copy them here and preserve their folder structure, including the five supplied assignment subfolders. An empty source folder is sufficient for this installation assignment; textbooks and knowledge will be added later.</li>
+<li>If using the optional checklist, save it in the <code>GenAI02</code> subfolder; create that subfolder if needed.</li>
+<li>If files are present, right-click the source folder, select <strong>Always keep on this device</strong>, and wait for downloading and synchronization to finish.</li>
+</ol>
+<div class="callout"><strong>Important separation:</strong> OneDrive remains outside the Hermes Docker sandbox. During first setup, the starter kit copies the course source into a bounded local working copy. Later menu runs do not automatically overwrite student work by recopying OneDrive files.</div>
+<hr/>
+</div>
+
+<div class="col-lg-12">
+<a aria-controls="Install" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Install">Install Student Hermes Starter Kit v2.0.7</a>
+</div>
+<div class="collapse in col-lg-12" id="Install">
+<h2>Step 1 — Extract in Downloads, then copy and rename</h2>
+<ol>
+<li>Download <code>Student_Hermes_Starter_Kit_v2_0_7.zip</code> from the instructor's shared OneDrive ReadOnly course folder into <strong>Downloads</strong>.</li>
+<li>Right-click the ZIP, select <strong>Properties</strong>, check <strong>Unblock</strong> if shown, and select <strong>Apply</strong>.</li>
+<li>Right-click the ZIP and select <strong>Extract All</strong>. Keep the extraction in <strong>Downloads</strong>. Do not run files inside the ZIP preview.</li>
+<li>Open the extracted folders until you find the folder containing <code>README_FIRST.txt</code>, <code>Docs</code>, and <code>Scripts</code>. Copy that whole folder into <code>C:\Users\&lt;StarID&gt;\scripts</code>. Create the <code>scripts</code> folder if necessary.</li>
+<li>Rename the copied folder to <code>MIS362_Student_Hermes_Starter_Kit</code>.</li>
+</ol>
+<p>Your installed folder must now be:</p>
+<pre>C:\Users\&lt;StarID&gt;\scripts\MIS362_Student_Hermes_Starter_Kit</pre>
+<p><strong>If that folder already exists:</strong> stop and ask the instructor to update it while preserving your configuration. Do not merge folders, delete your profile, or run the reset script.</p>
+
+<h2>Step 2 — Open the installed Scripts folder</h2>
+<p>In File Explorer, open:</p>
+<pre>C:\Users\&lt;StarID&gt;\scripts\MIS362_Student_Hermes_Starter_Kit\Scripts</pre>
+<p>Confirm that <code>Course_Config.psd1</code>, <code>StudentCourse_Config.psd1</code>, and <code>000_Student_Setup.cmd</code> are present. If you see another starter-kit folder instead, you copied the outer extraction folder; ask for help correcting the nesting.</p>
+<p>Turn on <strong>File Explorer &gt; View &gt; Show &gt; File name extensions</strong>. From this point onward, work in the installed copy under <code>scripts</code>.</p>
+<p>Additional help is in <code>Docs\Student_Hermes_Installation_and_First_Setup_Guide_v2_0_7.docx</code>.</p>
+
+<h2>Step 3 — Configure the student values</h2>
+<p>The starter kit separates student-entered identifiers from instructor-managed settings:</p>
+<ul>
+<li><code>StudentCourse_Config.psd1</code> contains only the five student values. This is the only configuration file students edit.</li>
+<li><code>Course_Config.psd1</code> contains instructor-managed naming, source, Git workflow, inference, Docker, WSL, version, and security-related settings. Do not edit it.</li>
+</ul>
+<p>Right-click <code>StudentCourse_Config.psd1</code>, choose <strong>Open with &gt; Notepad</strong>, and edit only the quoted values. Save it with its existing <code>.psd1</code> extension, not <code>.psd1.txt</code>.</p>
+<p>For MIS362 it should contain:</p>
+<pre>@{
+    # STUDENTS EDIT ONLY THESE FIVE VALUES
+    CourseCode      = 'MIS362'
+    StarID          = 'replaceWithYourStarID'
+    NetworkUsername = 'replaceWithYourNetworkUsername'
+    NetworkCourseID = '20273000022'
+    GitHubUsername  = ''
+}
+</pre>
+<p>Students are responsible for entering these five values correctly:</p>
+<table class="table table-bordered table-striped">
+<thead><tr><th>Setting</th><th>MIS362 value</th><th>Rule</th></tr></thead>
+<tbody>
+<tr><td><code>CourseCode</code></td><td><code>MIS362</code></td><td>Use the assigned course code. The starter kit derives the profile, workspace, shortcut, and backup names from it.</td></tr>
+<tr><td><code>StarID</code></td><td>Your StarID</td><td>It must exactly match the name of your Windows home folder.</td></tr>
+<tr><td><code>NetworkUsername</code></td><td>Your ClassStorage/ <a href="https://eprofessor.azurewebsites.net/HelpFiles/NetworkUserName/NetworkUserName.html">network username</a></td><td>This is not your StarID or email address</td></tr>
+<tr><td><code>NetworkCourseID</code></td><td><code>20273000022</code></td><td>Use the instructor-supplied course storage ID. Do not guess.</td></tr>
+<tr><td><code>GitHubUsername</code></td><td>Your GitHub username or blank</td><td>MIS362 currently has Git disabled for this Hermes workflow, so leave it blank. It becomes required only when the instructor-managed configuration enables Git.</td></tr>
+</tbody>
+</table>
+<p>This pattern lets you create a separate Hermes profile for another course: enter that course's code, your identifiers, the instructor-supplied network storage ID, and your GitHub username when that course uses Git.</p>
+<p>The v2.0.7 scripts read both configuration files separately. The profile, workspace, backup, and OneDrive source use the lowercase course code plus <code>hermes</code>. The installed kit uses the uppercase course code plus <code>_Student_Hermes_Starter_Kit</code>. The configuration loader rejects extra student keys. This separation prevents accidental overrides; it is not a Windows file-permission restriction.</p>
+<div class="callout callout-danger"><strong>Never put a password, API key, token, or other secret in either PSD1 file.</strong> Keep the quotation marks, braces, and other PowerShell syntax exactly as supplied. Do not add keys or settings to <code>StudentCourse_Config.psd1</code>.</div>
+
+<h2>Step 4 — Verify the OneDrive source</h2>
+<p>Save and close Notepad. Confirm in File Explorer that <code>OneDrive - Minnesota State\mis362hermes</code> exists. Setup derives this path from your course code and checks it for you.</p>
+
+<h2>Step 5 — Open PowerShell 7 and run setup</h2>
+<p>Keep Docker Desktop running. Open a normal <strong>PowerShell 7</strong> window. <strong>Do not select Run as Administrator.</strong></p>
+<p>Copy and run these two commands, one line at a time. <code>$HOME</code> automatically supplies your Windows home folder, including any <code>.e</code> suffix.</p>
+<pre>Set-Location "$HOME\scripts\MIS362_Student_Hermes_Starter_Kit\Scripts"
+.\000_Student_Setup.cmd</pre>
+<p>Setup uses this installed folder in place. It checks your five values and prerequisites, installs or finds native Windows Hermes, prepares the working copy and course profile, and opens the Daily Menu. Leave the window open during downloads.</p>
+<p>If setup stops, read the error and ask the instructor for help. After correcting the issue, rerun <code>.\000_Student_Setup.cmd</code> from this same installed <code>Scripts</code> folder. A stored course key is reused. The kit does not automatically copy itself elsewhere.</p>
+<p>For later sessions, use the <code>MIS362 Student Hermes</code> shortcut. If Windows could not create a shortcut, the same two commands above reopen the Daily Menu. Existing <code>mis362hermes</code> data is reused; an older <code>mis362_student</code> installation requires instructor-guided migration.</p>
+
+<div class="callout callout-warning"><strong>If WSL detection fails:</strong> run <code>wsl --version</code> directly in PowerShell 7 and show the instructor both outputs. A version-reading error does not necessarily mean WSL is outdated. Do not repeatedly run updates or change Windows features to get past it.</div>
+<h2>Step 6 — Enter the OpenRouter credential only when prompted</h2>
+<ol>
+<li>Use your own OpenRouter account for the free setup unless the instructor has already supplied an individual course API key. No payment or credit purchase is required for GenAI02.</li>
+<li>If you need a key, open the official <a href="https://openrouter.ai/keys" target="_blank">OpenRouter API Keys page</a> and create a normal model-access API key. A course-specific name such as <code>MIS362_API_Key01</code> is recommended.</li>
+<li>When setup prompts for <code>OPENROUTER_API_KEY</code>, paste the key directly into the hidden prompt and press Enter. Characters are not displayed; this is expected. Do not leave the key blank.</li>
+<li>The starter kit stores it only in the course profile's local <code>.env</code> file. The profile <code>.env</code> is not placed in either PSD1 file, mounted into Docker, or selected for profile backups. It is a local plaintext file, not an encrypted vault; never copy it into a course folder.</li>
+</ol>
+<p>Do not save or display the key in OneDrive, Notepad, Notepad++, OneNote, D2L, source code, GitHub, email, Teams, prompts, screenshots, or assignment files. If a key is exposed, revoke it in OpenRouter and create a replacement.</p>
+<hr/>
+</div>
+
+<div class="col-lg-12">
+<a aria-controls="Verify" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Verify">Verify the Installation and Capture Evidence</a>
+</div>
+<div class="collapse in col-lg-12" id="Verify">
+<h2>Step 7 — Run the complete status check</h2>
+<ol>
+<li>Use the Daily Menu already open after setup. For a later session, open the <code>MIS362 Student Hermes</code> shortcut or rerun the installed setup command.</li>
+<li>At the Daily Menu, choose <strong>2 — Check installation/status</strong>.</li>
+<li>Wait for the check to finish. The first run may download the course Docker image. Option 2 tests a temporary container and pauses on a compact <strong>SCREENSHOT SUMMARY</strong>. Enlarge the PowerShell window if needed.</li>
+<li>Do not open an OpenRouter key page, the profile <code>.env</code> file, or any credential screen while capturing evidence.</li>
+</ol>
+<p>The final summary must show:</p>
+<ul>
+<li><code>Profile: mis362hermes</code> and <code>Kit version: 2.0.7</code></li>
+<li>The installed Hermes version</li>
+<li><code>Docker: Linux engine running</code></li>
+<li><code>Provider: openrouter</code>, <code>Model: openrouter/free</code>, and <code>Fallbacks: 0</code></li>
+<li><code>API key: Stored (hidden)</code></li>
+<li><code>Security settings: PASS</code>, <code>Docker sandbox: PASS</code>, and <code>Setup checks: PASS</code></li>
+</ul>
+<p><strong>Capture your one screenshot now, while the summary is paused.</strong> Then press Enter to return to the Daily Menu. If the summary says <code>NOT READY</code>, resolve the reported issue with the instructor and rerun option 2.</p>
+<p>The Docker check verifies writable course/export mounts, read-only reference/Git-guard mounts, disabled container networking, and absence of the checked API-key environment variables. It does not send a prompt to OpenRouter or prove that a Hermes model/tool request has succeeded.</p>
+
+<h2>Step 8 — Confirm terminal Hermes starts</h2>
+<ol>
+<li>Return to the Daily Menu and choose <strong>1 — Start Hermes</strong>.</li>
+<li>Confirm that the terminal Hermes interface opens in the <code>mis362hermes</code> environment. No prompt or model response is required in GenAI02.</li>
+<li>Type <code>/quit</code> to return to the Daily Menu.</li>
+<li>Choose <strong>7 — Exit</strong>. Do not normally close the PowerShell window to stop Hermes.</li>
+</ol>
+
+<h2>Step 9 — Finish the assignment evidence</h2>
+<p>Use your one status screenshot for the Digital Artifact Notebook evidence below, then complete the reflection. The Markdown checklist is optional and is not uploaded separately.</p>
+<hr/>
+</div>
+
+<div class="col-lg-12">
+<a aria-controls="Safety" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Safety">Security Boundaries and Stop Conditions</a>
+</div>
+<div class="collapse in col-lg-12" id="Safety">
+<h2>Why Docker isolation matters</h2>
+<p>An AI agent can propose and execute commands much faster than a person. A mistaken instruction, misunderstood path, unsafe package, or malicious text inside a file could otherwise affect unrelated course files, personal files, credentials, or network services. Docker reduces the impact of a mistake by placing Hermes terminal and code execution inside a short-lived Linux container with narrowly defined mounts, resource limits, and no terminal/code network connection.</p>
+<p>Docker is one layer of defense, not a complete security guarantee. The Windows-side Hermes program still needs Internet access to call OpenRouter, and later browser tools may have their own separately controlled Internet access. Student judgment, approval prompts, protected credentials, and verification remain necessary.</p>
+<h2>What is and is not inside the Docker boundary</h2>
+<table class="table table-bordered table-striped">
+<thead><tr><th>Item</th><th>Docker access</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>Bounded course working copy</td><td><code>/workspace/course</code>, read/write</td><td>Docker terminal commands can edit the copied course files intended for the agent.</td></tr>
+<tr><td>Git metadata or no-Git guard</td><td><code>/workspace/course/.git</code>, read-only</td><td>Blocks writes to the mounted metadata/guard. Git-disabled mode is a workflow choice; it does not uninstall Git or prevent creating repositories elsewhere in the writable copy.</td></tr>
+<tr><td>Course reference files</td><td><code>/reference</code>, read-only</td><td>Hermes may consult but not modify instructor-provided reference material.</td></tr>
+<tr><td>Export folder</td><td><code>/output</code>, read/write</td><td>Provides a deliberate location for files that must leave the working copy.</td></tr>
+<tr><td>OneDrive course source</td><td>Not mounted</td><td>The synchronized authoritative source remains outside Docker; first setup copies it into the bounded working copy.</td></tr>
+<tr><td>API key and profile <code>.env</code></td><td>Not mounted or forwarded</td><td>The kit does not forward the OpenRouter credential into the container environment. Never copy a credential into a mounted course file.</td></tr>
+<tr><td>Other courses and Windows folders</td><td>Not mounted</td><td>Desktop, Documents, Downloads, the broader Windows home folder, other profiles, and other course workspaces are outside the container's permitted file view.</td></tr>
+<tr><td>Network backups</td><td>Not mounted</td><td>ClassStorage backups are created by the controlled Windows-side menu, not by agent terminal commands.</td></tr>
+</tbody>
+</table>
+<div class="callout callout-success">
+<h3>Expected security baseline</h3>
+<ul>
+<li>The terminal backend is Docker, and its current directory is <code>/workspace/course</code>.</li>
+<li>Only the four approved host bind mounts listed above are configured; the container also has its own Linux image filesystem.</li>
+<li>Docker terminal/code networking, Windows working-directory mounting, environment forwarding, and container persistence are off.</li>
+<li>The configured container limit is two CPU cores and 4 GB RAM; persistence is disabled.</li>
+<li>Persistent skill and memory writes require student approval.</li>
+<li>GenAI02 does not ask you to add skills, tools, plugins, integrations, or model fallbacks. Hermes may include bundled capabilities; adding course-specific capabilities is later work.</li>
+</ul>
+</div>
+<div class="callout callout-danger">
+<h3>Stop and contact the instructor if</h3>
+<ul>
+<li>The profile or workspace belongs to another course.</li>
+<li>Setup cannot find the OneDrive course source folder.</li>
+<li>Docker is not using its Linux engine.</li>
+<li>The status check does not report <code>Security settings: PASS</code>.</li>
+<li>A step asks you to run the course menu as Administrator, broadly change execution policy, disable antivirus protection, or weaken Docker isolation. Ask for help with any prerequisite installer that requests elevation.</li>
+<li>A Hermes migration or compatibility check fails.</li>
+</ul>
+</div>
+<p>Do not delete profiles, reset the starter kit, change security settings, or run broad repair commands unless the instructor specifically directs you to do so.</p>
+<hr/>
+</div>
+
+<div class="col-lg-12">
+<a aria-controls="Reflection" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Reflection">Final Reflection — 50 Points</a>
+</div>
+<div class="collapse in col-lg-12" id="Reflection">
+<p>Complete this reflection after finishing and verifying the required artifact.</p>
+<label for="q1"><strong>(50) Question 1 — Final Reflection</strong></label>
+<textarea aria-readonly="true" class="form-control" id="q1" maxlength="3000" name="q1" readonly="" rows="6">Explain why Docker isolation is important when an AI agent can execute terminal commands. Identify what the MIS362 Docker container can access, what remains outside the container, and one risk that still requires student judgment, an approval decision, or independent verification. Also explain how the separate mis362hermes profile and option 2 status check prepare the agent for later MIS362 assignments.</textarea>
+<br/>
+<div class="alert alert-warning" role="alert">
+    Complete this reflection in the published webpage. The response is submitted to the web database but is not saved back into the HTML file. Keep a copy for your Digital Artifact Notebook.
+</div>
+<label for="a1"><strong>Your reflection:</strong></label>
+<textarea class="form-control" id="a1" maxlength="3000" name="a1" placeholder="Type or paste your reflection here..." rows="12"></textarea>
+<small class="text-muted" id="charCount-a1">Maximum: 3000 characters. AI feedback is formative feedback, not a grade.</small>
+<hr/>
+</div>
+
+<div class="col-lg-12">
+<a aria-controls="Artifact" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Artifact">Digital Artifact Notebook Evidence — 50 Points</a>
+</div>
+<div class="collapse in col-lg-12" id="Artifact">
+<p>Create or open the OneNote Digital Artifact Notebook page named <code><span class="SummativeID"></span></code>.</p>
+<p><strong>(50 points)</strong> Add exactly one primary artifact:</p>
+<div class="template-box">
+<p>Paste one screenshot of the PowerShell Daily Menu option 2 status output. Capture the paused <strong>OPTION 2 STATUS - SCREENSHOT SUMMARY</strong> so this single screenshot visibly confirms the profile name, Hermes version, Docker Linux engine, provider, model, and security PASS result. No prompt or Hermes response is required.</p>
+<div class="artifact-placeholder">[PASTE ONE HERMES STATUS SCREENSHOT HERE]</div>
+<h3>Evidence 1 — What I configured</h3>
+<p>Identify the course profile, source-folder naming rule, provider, and starting model. Do not include the API key or private account information.</p>
+<h3>Evidence 2 — How I verified it</h3>
+<p>State which option you ran and list the visible PASS or ready indicators from the screenshot.</p>
+<h3>Evidence 3 — Why the controls matter</h3>
+<p>Explain one way the separate profile, bounded workspace, OneDrive separation, Docker isolation, or approval requirement reduces risk.</p>
+</div>
+<p>Do not include passwords, API keys, authentication screens, the contents of <code>.env</code>, private information, or real customer data. Add the same final reflection used in the web form to the OneNote page.</p>
+<p>Export the completed OneNote page as <code><span class="SummativeID"></span>.pdf</code> and upload it to the matching D2L assignment folder.</p>
+<hr/>
+</div>
+
+<div class="col-lg-12">
+<a aria-controls="Submission" aria-expanded="true" class="btn btn-info" data-toggle="collapse" href="#Submission">Assignment Submission</a>
+</div>
+<div class="collapse in col-lg-12" id="Submission">
+<ol>
+<li>Complete the v2.0.7 first-time setup and resolve every blocking error.</li>
+<li>Run Daily Menu option 2 and confirm the required profile, workspace, Hermes, Docker, provider, model, and security results.</li>
+<li>Choose option 1, confirm terminal Hermes opens, exit with <code>/quit</code>, and then choose option 7.</li>
+<li>If helpful, use the optional Markdown checklist to review your setup. It is not a separate submission.</li>
+<li>Complete the Final Reflection and keep a copy.</li>
+<li>Add the one required status screenshot, three labeled evidence statements, and reflection to the OneNote page named <code><span class="SummativeID"></span></code>.</li>
+<li>Export the OneNote page as <code><span class="SummativeID"></span>.pdf</code> and upload it to the matching D2L folder.</li>
+<li>Submit this webpage using the button at the top or bottom and review the formative AI feedback.</li>
+</ol>
+<div class="callout callout-warning"><strong>Two separate submissions are required:</strong> the D2L PDF upload and the web-form submission.</div>
+<hr/>
+</div>
+<div class="col-lg-12">
+<br/>
+<input class="btn btn-danger btn-block btn-lg" name="Submit" type="submit" value="Submit to the web database and receive AI feedback"/>
+<br/>
+</div>
+</form>
+<footer>
+<div class="col-lg-12 text-muted" id="licenseInfo"></div>
+<div class="col-lg-12 text-muted" id="footerText"></div>
+</footer>
+<script src="../../ReadOnly/jquery-1.js"></script>
+<script src="../../ReadOnly/bootstrap.js"></script>
+<script src="../studentConstants.js"></script>
+<script src="../../ReadOnly/courseConstants.js"></script>
+<script src="../../ReadOnly/domForms.js"></script>
+</body>
+</html>

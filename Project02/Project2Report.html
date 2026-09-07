@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MIS362 Project 2 Report</title>
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+</head>
+
+<body class="container-fluid">
+    <!-- IMPORTANT: Replace the marked action value with the final Project 2 Report .aspx endpoint before publishing. -->
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" method="post" name="frmAssignment" id="frmAssignment" autocomplete="off">
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <input name="assignmentVersion" id="assignmentVersion" value="Project2Report-FA2026-v2" type="hidden">
+        <input name="reflectionQuestion" id="reflectionQuestion" value="11" type="hidden">
+
+        <h1 class="text-center">Project 2—MIS Knowledge Exchange</h1>
+        <h2 class="text-center">Final Report</h2>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="FirstName" class="text-dark">First Name:</label>
+                    <input class="form-control" name="FirstName" id="FirstName" type="text" readonly aria-readonly="true" autocomplete="given-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="LastName" class="text-dark">Last Name:</label>
+                    <input class="form-control" name="LastName" id="LastName" type="text" readonly aria-readonly="true" autocomplete="family-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="StarID" class="text-dark">StarID:</label>
+                    <input class="form-control" name="StarID" id="StarID" type="text" readonly aria-readonly="true" autocomplete="username">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="email" class="text-dark">Email:</label>
+                    <input class="form-control" name="email" id="email" type="email" readonly aria-readonly="true" autocomplete="email">
+                </div>
+            </div>
+        </div>
+        <input name="pin" id="pin" type="hidden">
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Semester" class="text-dark">Semester:</label>
+                    <input class="form-control" name="Semester" id="Semester" type="text" readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Class" class="text-dark">Class:</label>
+                    <input class="form-control" name="Class" id="Class" type="text" readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Section" class="text-dark">Section:</label>
+                    <input class="form-control" name="Section" id="Section" type="text" readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="assignment" class="text-dark">Assignment:</label>
+                    <input class="form-control" name="assignment" id="assignment" type="text" readonly value="P2Report" aria-readonly="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit Project 2 Report" type="submit">
+            <br>
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            700 Points
+            <hr>
+        </div>
+
+        <section class="col-lg-12">
+            <a href="#Overview" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Overview">Overview and Reporting Requirements</a>
+            <div id="Overview" class="collapse in">
+                <p>
+                    Review the complete <a href="default.html" target="_blank">Project 2 overview</a> before completing this report.
+                    Describe the problem-solving process and outcome without identifying the participant.
+                </p>
+                <div class="alert alert-warning" role="note">
+                    <strong>Do not include the participant's name, email address, employer-confidential information, account identifiers,
+                    passwords, authentication codes, financial information, health information, or other sensitive details.</strong>
+                </div>
+                <p>
+                    Questions 1–10 require concise responses in text-input fields. Question 11 is the only extended reflection response.
+                    A well-documented unsuccessful first attempt can still demonstrate strong MIS problem solving when you explain testing, revision, and limitations.
+                </p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="col-lg-12">
+            <a href="#Exercise01" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Exercise01">Exercise 1—Problem, Solution, and Verification</a>
+            <div id="Exercise01" class="collapse in">
+                <input type="hidden" name="q1" id="q1" value="Identify the primary technology, software, service, or process involved in the project.">
+                <div class="form-group">
+                    <label for="a1"><strong>(25) Question 1—Technology or process:</strong> Identify the primary technology, software, service, or process involved in the project.</label>
+                    <input name="a1" id="a1" type="text" size="500" maxlength="500" class="form-control" placeholder="Identify the primary technology or process">
+                </div>
+
+                <input type="hidden" name="q2" id="q2" value="State the participant's original problem or opportunity as specifically as possible without identifying the participant.">
+                <div class="form-group">
+                    <label for="a2"><strong>(75) Question 2—Problem definition:</strong> State the participant's original problem or opportunity as specifically as possible without identifying the participant.</label>
+                    <input name="a2" id="a2" type="text" size="500" maxlength="500" class="form-control" placeholder="Describe the original problem or opportunity">
+                </div>
+
+                <input type="hidden" name="q3" id="q3" value="What did the participant need, and how did you determine whether a solution would be successful?">
+                <div class="form-group">
+                    <label for="a3"><strong>(50) Question 3—Needs and success criteria:</strong> What did the participant need, and how did you determine whether a solution would be successful?</label>
+                    <input name="a3" id="a3" type="text" size="500" maxlength="500" class="form-control" placeholder="State the need and a measurable or observable success criterion">
+                </div>
+
+                <input type="hidden" name="q4" id="q4" value="Describe the solution you recommended or implemented and why it was appropriate.">
+                <div class="form-group">
+                    <label for="a4"><strong>(100) Question 4—Proposed or implemented solution:</strong> Describe the solution you recommended or implemented and why it was appropriate.</label>
+                    <input name="a4" id="a4" type="text" size="500" maxlength="500" class="form-control" placeholder="Summarize the solution and why it fit the participant's needs">
+                </div>
+
+                <input type="hidden" name="q5" id="q5" value="Summarize the most important actions, settings, tools, instructions, or resources used.">
+                <div class="form-group">
+                    <label for="a5"><strong>(75) Question 5—Actions and tools:</strong> Summarize the most important actions, settings, tools, instructions, or resources used.</label>
+                    <input name="a5" id="a5" type="text" size="500" maxlength="500" class="form-control" placeholder="List the most important actions and tools">
+                </div>
+
+                <input type="hidden" name="q6" id="q6" value="Describe the most important issue, obstacle, limitation, or unexpected result that arose.">
+                <div class="form-group">
+                    <label for="a6"><strong>(75) Question 6—Issues and constraints:</strong> Describe the most important issue, obstacle, limitation, or unexpected result that arose.</label>
+                    <input name="a6" id="a6" type="text" size="500" maxlength="500" class="form-control" placeholder="Describe an important issue and how it affected the work">
+                </div>
+
+                <input type="hidden" name="q7" id="q7" value="How did you test or verify the solution, and what evidence showed whether it worked?">
+                <div class="form-group">
+                    <label for="a7"><strong>(75) Question 7—Testing and verification:</strong> How did you test or verify the solution, and what evidence showed whether it worked?</label>
+                    <input name="a7" id="a7" type="text" size="500" maxlength="500" class="form-control" placeholder="Explain the test and the result">
+                </div>
+
+                <input type="hidden" name="q8" id="q8" value="Describe any meaningful AI assistance used and how you verified it. Enter No AI used when applicable.">
+                <div class="form-group">
+                    <label for="a8"><strong>(25) Question 8—AI assistance and verification:</strong> Describe any meaningful AI assistance used and how you verified it. Enter <code>No AI used</code> when applicable.</label>
+                    <input name="a8" id="a8" type="text" size="500" maxlength="500" class="form-control" placeholder="Describe verified AI assistance or enter No AI used">
+                </div>
+
+                <input type="hidden" name="q9" id="q9" value="Identify one privacy, security, accessibility, usability, cost, or ethical consideration and explain how it affected the project.">
+                <div class="form-group">
+                    <label for="a9"><strong>(50) Question 9—Responsible technology consideration:</strong> Identify one privacy, security, accessibility, usability, cost, or ethical consideration and explain how it affected the project.</label>
+                    <input name="a9" id="a9" type="text" size="500" maxlength="500" class="form-control" placeholder="Identify one responsible-use consideration and its effect">
+                </div>
+
+                <input type="hidden" name="q10" id="q10" value="State the final outcome and summarize the participant's response without identifying the participant.">
+                <div class="form-group">
+                    <label for="a10"><strong>(25) Question 10—Outcome and participant feedback:</strong> State the final outcome and summarize the participant's response without identifying the participant.</label>
+                    <input name="a10" id="a10" type="text" size="500" maxlength="500" class="form-control" placeholder="Summarize the outcome and participant feedback">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="col-lg-12">
+            <a href="#Reflection" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Reflection">Exercise 2—Final Reflection</a>
+            <div id="Reflection" class="collapse in">
+                <input type="hidden" name="q11" id="q11" value="Reflect on the complete project. What did you learn about the relationship among people, processes, information, and technology, and what would you do differently when solving a similar problem in the future?">
+                <div class="form-group">
+                    <label for="a11"><strong>(25) Question 11—Final reflection:</strong> Reflect on the complete project. What did you learn about the relationship among people, processes, information, and technology, and what would you do differently when solving a similar problem in the future?</label>
+                    <textarea name="a11" id="a11" rows="8" maxlength="3000" class="form-control" placeholder="Type or paste your final reflection here..."></textarea>
+                    <small class="text-muted">Maximum: 3000 characters.</small>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="col-lg-12">
+            <a href="#Submission" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Submission">Assignment Submission</a>
+            <div id="Submission" class="collapse in">
+                <p>Open the published assignment on your course website and confirm that your student information and all responses are correct.</p>
+                <p><strong>(50) Homepage hyperlink:</strong> Verify that Project2Report.html is linked from your course homepage.</p>
+                <p><strong>(50) Web database submission:</strong> Press the Submit button at the top or bottom of this page and follow the confirmation-page instructions.</p>
+                <div class="alert alert-info" role="note">
+                    Browser-entered responses may not be saved in the webpage. Keep a copy of your answers and reflection until the submission is confirmed.
+                </div>
+            </div>
+        </section>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit Project 2 Report" type="submit">
+            <br>
+        </div>
+    </form>
+
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+</body>
+</html>

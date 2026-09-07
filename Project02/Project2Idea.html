@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MIS362 Project 2 Idea</title>
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+</head>
+
+<body class="container-fluid">
+    <!-- IMPORTANT: Replace the marked action value with the final Project 2 Idea .aspx endpoint before publishing. -->
+
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" method="post" name="frmAssignment" id="frmAssignment">
+
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <input name="assignmentVersion" id="assignmentVersion" value="Project2Idea-FA2026-v2" type="hidden">
+
+        <h1 class="text-center">Project 2—MIS Knowledge Exchange</h1>
+        <h2 class="text-center">Idea Submission</h2>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="FirstName" class="text-dark">First Name:</label>
+                    <input class="form-control" name="FirstName" id="FirstName" type="text" readonly aria-readonly="true" autocomplete="given-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="LastName" class="text-dark">Last Name:</label>
+                    <input class="form-control" name="LastName" id="LastName" type="text" readonly aria-readonly="true" autocomplete="family-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="StarID" class="text-dark">StarID:</label>
+                    <input class="form-control" name="StarID" id="StarID" type="text" readonly aria-readonly="true" autocomplete="username">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="email" class="text-dark">Email:</label>
+                    <input class="form-control" name="email" id="email" type="email" readonly aria-readonly="true" autocomplete="email">
+                </div>
+            </div>
+        </div>
+        <input name="pin" id="pin" type="hidden">
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Semester" class="text-dark">Semester:</label>
+                    <input class="form-control" name="Semester" id="Semester" type="text" readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Class" class="text-dark">Class:</label>
+                    <input class="form-control" name="Class" id="Class" type="text" readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Section" class="text-dark">Section:</label>
+                    <input class="form-control" name="Section" id="Section" type="text" readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="assignment" class="text-dark">Assignment:</label>
+                    <input class="form-control" name="assignment" id="assignment" type="text" readonly value="P2Idea" aria-readonly="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit Project 2 Idea" type="submit">
+            <br>
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            80 Points
+            <hr>
+        </div>
+
+        <section class="col-lg-12">
+            <a href="#Overview" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Overview">Overview and Privacy Requirements</a>
+            <div id="Overview" class="collapse in">
+                <p>
+                    Review the complete <a href="default.html" target="_blank">Project 2 overview</a> before submitting this idea.
+                    Propose a specific, safe, authorized, and feasible technology problem or opportunity that you can investigate and test between Weeks 3 and 13.
+                </p>
+                <div class="alert alert-warning" role="note">
+                    <strong>Do not enter the participant's name, email address, employer-confidential information, account identifiers, passwords,
+                    authentication codes, financial information, health information, or other sensitive details.</strong>
+                    Describe the participant only by a general role or relationship.
+                </div>
+                <p>All six responses must be brief. Use the Project 2 Report later to document the completed work.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="col-lg-12">
+            <a href="#Exercise01" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Exercise01">Exercise 1—Project Idea</a>
+            <div id="Exercise01" class="collapse in">
+                <input type="hidden" name="q1" id="q1" value="Give your proposed project a short descriptive title.">
+                <div class="form-group">
+                    <label for="a1"><strong>(10) Question 1—Project title:</strong> Give your proposed project a short descriptive title.</label>
+                    <input name="a1" id="a1" type="text" size="500" maxlength="500" class="form-control" placeholder="Example: Organize and secure cloud files">
+                </div>
+
+                <input type="hidden" name="q2" id="q2" value="Describe the participant by role or relationship without providing identifying information.">
+                <div class="form-group">
+                    <label for="a2"><strong>(10) Question 2—Participant context:</strong> Describe the participant by role or relationship without providing identifying information.</label>
+                    <input name="a2" id="a2" type="text" size="500" maxlength="500" class="form-control" placeholder="Example: A retired family member who uses Windows and an Android phone">
+                </div>
+
+                <input type="hidden" name="q3" id="q3" value="Identify the device, software, service, or technology-supported process involved.">
+                <div class="form-group">
+                    <label for="a3"><strong>(10) Question 3—Technology or process:</strong> Identify the device, software, service, or technology-supported process involved.</label>
+                    <input name="a3" id="a3" type="text" size="500" maxlength="500" class="form-control" placeholder="Identify the primary technology or process">
+                </div>
+
+                <input type="hidden" name="q4" id="q4" value="State the specific problem or opportunity you plan to address.">
+                <div class="form-group">
+                    <label for="a4"><strong>(10) Question 4—Problem or opportunity:</strong> State the specific problem or opportunity you plan to address.</label>
+                    <input name="a4" id="a4" type="text" size="500" maxlength="500" class="form-control" placeholder="State the problem or opportunity clearly">
+                </div>
+
+                <input type="hidden" name="q5" id="q5" value="What result would show that the project was successful for the participant?">
+                <div class="form-group">
+                    <label for="a5"><strong>(10) Question 5—Expected benefit and success measure:</strong> What result would show that the project was successful for the participant?</label>
+                    <input name="a5" id="a5" type="text" size="500" maxlength="500" class="form-control" placeholder="Describe a result that can be tested or verified">
+                </div>
+
+                <input type="hidden" name="q6" id="q6" value="Identify one likely constraint involving usability, accessibility, privacy, security, cost, or technical ability, and state your next step.">
+                <div class="form-group">
+                    <label for="a6"><strong>(10) Question 6—Initial concern and plan:</strong> Identify one likely constraint involving usability, accessibility, privacy, security, cost, or technical ability, and state your next step.</label>
+                    <input name="a6" id="a6" type="text" size="500" maxlength="500" class="form-control" placeholder="Identify one concern and the next action you will take">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="col-lg-12">
+            <a href="#Submission" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Submission">Assignment Submission</a>
+            <div id="Submission" class="collapse in">
+                <p>Open the published assignment on your course website and confirm that your student information and all six responses are correct.</p>
+                <p><strong>(10) Homepage hyperlink:</strong> Verify that Project2Idea.html is linked from your course homepage.</p>
+                <p><strong>(10) Web database submission:</strong> Press the Submit button at the top or bottom of this page and follow the confirmation-page instructions.</p>
+                <div class="alert alert-info" role="note">
+                    Browser-entered responses may not be saved in the webpage. Keep a copy of your answers until the submission is confirmed.
+                </div>
+            </div>
+        </section>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit Project 2 Idea" type="submit">
+            <br>
+        </div>
+    </form>
+
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+</body>
+</html>
