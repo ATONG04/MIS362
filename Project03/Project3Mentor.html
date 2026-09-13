@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MIS362 Project 3 Mentor</title>
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+</head>
+
+<body class="container-fluid">
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" method="post" name="frmAssignment" id="frmAssignment">
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <input name="assignmentVersion" id="assignmentVersion" value="Project3Mentor-FA2026-v2" type="hidden">
+
+        <h1 class="text-center">Project 3—Business Mentoring</h1>
+        <h2 class="text-center">Mentor Selection</h2>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="FirstName" class="text-dark">First Name:</label>
+                <input class="form-control" name="FirstName" id="FirstName" type="text" readonly aria-readonly="true" autocomplete="given-name">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="LastName" class="text-dark">Last Name:</label>
+                <input class="form-control" name="LastName" id="LastName" type="text" readonly aria-readonly="true" autocomplete="family-name">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="StarID" class="text-dark">StarID:</label>
+                <input class="form-control" name="StarID" id="StarID" type="text" readonly aria-readonly="true" autocomplete="username">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="email" class="text-dark">Email:</label>
+                <input class="form-control" name="email" id="email" type="email" readonly aria-readonly="true" autocomplete="email">
+            </div></div>
+        </div>
+        <input name="pin" id="pin" type="hidden">
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="Semester" class="text-dark">Semester:</label>
+                <input class="form-control" name="Semester" id="Semester" type="text" readonly aria-readonly="true">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="Class" class="text-dark">Class:</label>
+                <input class="form-control" name="Class" id="Class" type="text" readonly aria-readonly="true">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="Section" class="text-dark">Section:</label>
+                <input class="form-control" name="Section" id="Section" type="text" readonly aria-readonly="true">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="assignment" class="text-dark">Assignment:</label>
+                <input class="form-control" name="assignment" id="assignment" type="text" readonly value="P3Mentor" aria-readonly="true">
+            </div></div>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit Project 3 Mentor" type="submit">
+            <br>
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">50 Points<hr></div>
+
+        <section class="col-lg-12">
+            <a href="#Overview" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Overview">Overview and Privacy Requirements</a>
+            <div id="Overview" class="collapse in">
+                <p>
+                    Review the complete <a href="https://eprofessor.azurewebsites.net/MIS362/Project03/default.html" target="_blank">Project 3 overview</a> before submitting this form.
+                    Select a mentor from a career area that interests you and make a realistic plan for a professional conversation.
+                </p>
+                <div class="alert alert-warning" role="note">
+                    <strong>Do not enter the mentor's name, email address, employer name, phone number, or other identifying information in this form.</strong>
+                    Professor Paulson will see the mentor's identity in the required introductory email that you send later.
+                </div>
+                <p>Use general descriptions such as “operations manager in manufacturing” or “retired financial-services professional.”</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="col-lg-12">
+            <a href="#Exercise01" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Exercise01">Exercise 1—Mentor Plan</a>
+            <div id="Exercise01" class="collapse in">
+                <input type="hidden" name="q1" id="q1" value="Describe the mentor's career area or professional role without providing the mentor's name or employer.">
+                <div class="form-group">
+                    <label for="a1"><strong>(10) Question 1—Career area:</strong> Describe the mentor's career area or professional role without providing the mentor's name or employer.</label>
+                    <input name="a1" id="a1" type="text" size="500" maxlength="500" class="form-control" placeholder="Example: Supply-chain manager in manufacturing">
+                </div>
+
+                <input type="hidden" name="q2" id="q2" value="Why did you choose this person as a mentor, and how is the mentor's experience relevant to your career interests?">
+                <div class="form-group">
+                    <label for="a2"><strong>(10) Question 2—Why this mentor:</strong> Why did you choose this person as a mentor, and how is the mentor's experience relevant to your career interests?</label>
+                    <input name="a2" id="a2" type="text" size="500" maxlength="500" class="form-control" placeholder="Explain the connection to your career interests">
+                </div>
+
+                <input type="hidden" name="q3" id="q3" value="How do you expect to communicate with the mentor, and what is your next step for arranging the conversation?">
+                <div class="form-group">
+                    <label for="a3"><strong>(5) Question 3—Communication plan:</strong> How do you expect to communicate with the mentor, and what is your next step for arranging the conversation?</label>
+                    <input name="a3" id="a3" type="text" size="500" maxlength="500" class="form-control" placeholder="Example: Zoom; send introductory email this week and propose two meeting times">
+                </div>
+
+                <input type="hidden" name="q4" id="q4" value="Identify one technology-change topic, including artificial intelligence, that you especially want to discuss with the mentor.">
+                <div class="form-group">
+                    <label for="a4"><strong>(5) Question 4—Technology topic:</strong> Identify one technology-change topic, including artificial intelligence, that you especially want to discuss with the mentor.</label>
+                    <input name="a4" id="a4" type="text" size="500" maxlength="500" class="form-control" placeholder="State one technology or AI-related career topic you want to explore">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="col-lg-12">
+            <a href="#Submission" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Submission">Assignment Submission</a>
+            <div id="Submission" class="collapse in">
+                <p>Open the published assignment on your course website and confirm that your student information and all four responses are correct.</p>
+                <p><strong>(10) Homepage hyperlink:</strong> Verify that Project3Mentor.html is linked from your course homepage.</p>
+                <p><strong>(10) Web database submission:</strong> Press the Submit button at the top or bottom and follow the confirmation-page instructions.</p>
+                <div class="alert alert-info" role="note">
+                    Browser-entered responses may not be saved in the webpage. Keep a copy until the submission is confirmed.
+                </div>
+            </div>
+        </section>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit Project 3 Mentor" type="submit">
+            <br>
+        </div>
+    </form>
+
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+</body>
+</html>

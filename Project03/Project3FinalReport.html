@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MIS362 Project 3 Final Report</title>
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+</head>
+
+<body class="container-fluid">
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" method="post" name="frmAssignment" id="frmAssignment">
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <input name="assignmentVersion" id="assignmentVersion" value="Project3FinalReport-FA2026-v2" type="hidden">
+
+        <h1 class="text-center">Project 3—Business Mentoring</h1>
+        <h2 class="text-center">Final Report</h2>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="FirstName" class="text-dark">First Name:</label>
+                <input class="form-control" name="FirstName" id="FirstName" type="text" readonly aria-readonly="true" autocomplete="given-name">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="LastName" class="text-dark">Last Name:</label>
+                <input class="form-control" name="LastName" id="LastName" type="text" readonly aria-readonly="true" autocomplete="family-name">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="StarID" class="text-dark">StarID:</label>
+                <input class="form-control" name="StarID" id="StarID" type="text" readonly aria-readonly="true" autocomplete="username">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="email" class="text-dark">Email:</label>
+                <input class="form-control" name="email" id="email" type="email" readonly aria-readonly="true" autocomplete="email">
+            </div></div>
+        </div>
+        <input name="pin" id="pin" type="hidden">
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="Semester" class="text-dark">Semester:</label>
+                <input class="form-control" name="Semester" id="Semester" type="text" readonly aria-readonly="true">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="Class" class="text-dark">Class:</label>
+                <input class="form-control" name="Class" id="Class" type="text" readonly aria-readonly="true">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="Section" class="text-dark">Section:</label>
+                <input class="form-control" name="Section" id="Section" type="text" readonly aria-readonly="true">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="assignment" class="text-dark">Assignment:</label>
+                <input class="form-control" name="assignment" id="assignment" type="text" readonly value="P3Report" aria-readonly="true">
+            </div></div>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit Project 3 Final Report" type="submit">
+            <br>
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">500 Points<hr></div>
+
+        <section class="col-lg-12">
+            <a href="#Overview" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Overview">Overview and Reporting Requirements</a>
+            <div id="Overview" class="collapse in">
+                <p>
+                    Review the complete <a href="https://eprofessor.azurewebsites.net/MIS362/Project03/default.html" target="_blank">Project 3 overview</a>.
+                    Synthesize the mentoring experience and explain what you learned about the career, technology change, artificial intelligence,
+                    professional skills, networking, and your own career preparation.
+                </p>
+                <div class="alert alert-warning" role="note">
+                    <strong>Do not identify the mentor in this web form.</strong> Do not include a name, email address, employer name,
+                    employer-confidential information, customer information, or other identifying or private details.
+                </div>
+                <p>
+                    Questions 1–8 require concise responses. Do not submit a transcript of the conversation or copy email text into the form.
+                    Summarize and interpret what you learned in your own words.
+                </p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="col-lg-12">
+            <a href="#Exercise01" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Exercise01">Exercise 1—Career and Mentor Insights</a>
+            <div id="Exercise01" class="collapse in">
+                <input type="hidden" name="q1" id="q1" value="Describe the mentor's career area and current career status without naming the mentor or employer.">
+                <div class="form-group">
+                    <label for="a1"><strong>(25) Question 1—Career area and status:</strong> Describe the mentor's career area and current career status without naming the mentor or employer.</label>
+                    <input name="a1" id="a1" type="text" size="500" maxlength="500" class="form-control" placeholder="Example: Employed operations manager in manufacturing">
+                </div>
+
+                <input type="hidden" name="q2" id="q2" value="Summarize the mentor's career path or work experience that is most relevant to your own career interests.">
+                <div class="form-group">
+                    <label for="a2"><strong>(75) Question 2—Relevant career path and experience:</strong> Summarize the mentor's career path or work experience that is most relevant to your own career interests.</label>
+                    <input name="a2" id="a2" type="text" size="500" maxlength="500" class="form-control" placeholder="Summarize the most relevant experience">
+                </div>
+
+                <input type="hidden" name="q3" id="q3" value="What did you learn about this career that you did not understand as clearly before the mentoring conversation?">
+                <div class="form-group">
+                    <label for="a3"><strong>(75) Question 3—What you learned about the career:</strong> What did you learn about this career that you did not understand as clearly before the mentoring conversation?</label>
+                    <input name="a3" id="a3" type="text" size="500" maxlength="500" class="form-control" placeholder="State a specific new understanding">
+                </div>
+
+                <input type="hidden" name="q4" id="q4" value="How has changing technology affected the mentor's work, responsibilities, organization, customers, or career opportunities?">
+                <div class="form-group">
+                    <label for="a4"><strong>(75) Question 4—Technology and career change:</strong> How has changing technology affected the mentor's work, responsibilities, organization, customers, or career opportunities?</label>
+                    <input name="a4" id="a4" type="text" size="500" maxlength="500" class="form-control" placeholder="Explain an important technology-driven change">
+                </div>
+
+                <input type="hidden" name="q5" id="q5" value="How is artificial intelligence affecting this career now, and what current or future opportunities, risks, or changes did the mentor identify?">
+                <div class="form-group">
+                    <label for="a5"><strong>(75) Question 5—Artificial intelligence and the career:</strong> How is artificial intelligence affecting this career now, and what current or future opportunities, risks, or changes did the mentor identify?</label>
+                    <input name="a5" id="a5" type="text" size="500" maxlength="500" class="form-control" placeholder="Summarize the mentor's view of AI's current and future impact">
+                </div>
+
+                <input type="hidden" name="q6" id="q6" value="Which skills, habits, judgment, adaptability, or professional qualities should you strengthen to prepare for this or a similar career?">
+                <div class="form-group">
+                    <label for="a6"><strong>(50) Question 6—Career preparation:</strong> Which skills, habits, judgment, adaptability, or professional qualities should you strengthen to prepare for this or a similar career?</label>
+                    <input name="a6" id="a6" type="text" size="500" maxlength="500" class="form-control" placeholder="Identify concrete preparation priorities">
+                </div>
+
+                <input type="hidden" name="q7" id="q7" value="What did you learn about professional networking, mentoring, or communicating with an experienced business professional?">
+                <div class="form-group">
+                    <label for="a7"><strong>(50) Question 7—Professional networking lesson:</strong> What did you learn about professional networking, mentoring, or communicating with an experienced business professional?</label>
+                    <input name="a7" id="a7" type="text" size="500" maxlength="500" class="form-control" placeholder="State a networking or communication lesson">
+                </div>
+
+                <input type="hidden" name="q8" id="q8" value="Give one recommendation for improving Project 3 for future MIS362 students.">
+                <div class="form-group">
+                    <label for="a8"><strong>(25) Question 8—Project improvement:</strong> Give one recommendation for improving Project 3 for future MIS362 students.</label>
+                    <input name="a8" id="a8" type="text" size="500" maxlength="500" class="form-control" placeholder="Give one specific improvement recommendation">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="col-lg-12">
+            <a href="#Submission" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Submission">Assignment Submission</a>
+            <div id="Submission" class="collapse in">
+                <p>Open the published assignment on your course website and confirm that your student information and all eight responses are correct.</p>
+                <p><strong>(25) Homepage hyperlink:</strong> Verify that Project3FinalReport.html is linked from your course homepage.</p>
+                <p><strong>(25) Web database submission:</strong> Press the Submit button at the top or bottom and follow the confirmation-page instructions.</p>
+                <div class="alert alert-info" role="note">
+                    Browser-entered responses may not be saved in the webpage. Keep a copy until the submission is confirmed.
+                </div>
+            </div>
+        </section>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit Project 3 Final Report" type="submit">
+            <br>
+        </div>
+    </form>
+
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+</body>
+</html>

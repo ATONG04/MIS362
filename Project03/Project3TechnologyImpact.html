@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MIS362 Project 3 Technology Impact</title>
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+</head>
+
+<body class="container-fluid">
+    <form class="container-fluid" action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx" method="post" name="frmAssignment" id="frmAssignment">
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <input name="assignmentVersion" id="assignmentVersion" value="Project3TechnologyImpact-FA2026-v2" type="hidden">
+
+        <h1 class="text-center">Project 3—Business Mentoring</h1>
+        <h2 class="text-center">Technology Impact</h2>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="FirstName" class="text-dark">First Name:</label>
+                <input class="form-control" name="FirstName" id="FirstName" type="text" readonly aria-readonly="true" autocomplete="given-name">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="LastName" class="text-dark">Last Name:</label>
+                <input class="form-control" name="LastName" id="LastName" type="text" readonly aria-readonly="true" autocomplete="family-name">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="StarID" class="text-dark">StarID:</label>
+                <input class="form-control" name="StarID" id="StarID" type="text" readonly aria-readonly="true" autocomplete="username">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="email" class="text-dark">Email:</label>
+                <input class="form-control" name="email" id="email" type="email" readonly aria-readonly="true" autocomplete="email">
+            </div></div>
+        </div>
+        <input name="pin" id="pin" type="hidden">
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="Semester" class="text-dark">Semester:</label>
+                <input class="form-control" name="Semester" id="Semester" type="text" readonly aria-readonly="true">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="Class" class="text-dark">Class:</label>
+                <input class="form-control" name="Class" id="Class" type="text" readonly aria-readonly="true">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="Section" class="text-dark">Section:</label>
+                <input class="form-control" name="Section" id="Section" type="text" readonly aria-readonly="true">
+            </div></div>
+            <div class="col-xs-12 col-sm-6 col-md-3"><div class="form-group">
+                <label for="assignment" class="text-dark">Assignment:</label>
+                <input class="form-control" name="assignment" id="assignment" type="text" readonly value="P3TechImpact" aria-readonly="true">
+            </div></div>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit Project 3 Technology Impact" type="submit">
+            <br>
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">200 Points<hr></div>
+
+        <section class="col-lg-12">
+            <a href="#Overview" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Overview">Overview and Reporting Requirements</a>
+            <div id="Overview" class="collapse in">
+                <p>
+                    Review the complete <a href="https://eprofessor.azurewebsites.net/MIS362/Project03/default.html" target="_blank">Project 3 overview</a>.
+                    Use your mentor conversation to analyze how technology has changed the career and how artificial intelligence is affecting or may affect the profession.
+                </p>
+                <div class="alert alert-warning" role="note">
+                    <strong>Do not identify the mentor.</strong> Do not enter a name, email address, employer name, private business information,
+                    customer information, or other identifying or confidential details.
+                </div>
+                <p>
+                    Artificial intelligence is a required topic. The mentor may report that AI currently has little direct impact;
+                    when that happens, explain the mentor's reasoning and what the mentor expects may change.
+                </p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="col-lg-12">
+            <a href="#Exercise01" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Exercise01">Exercise 1—Technology and Career Change</a>
+            <div id="Exercise01" class="collapse in">
+                <input type="hidden" name="q1" id="q1" value="Which technology has had the greatest impact on the mentor's career, and why did the mentor identify it as especially important?">
+                <div class="form-group">
+                    <label for="a1"><strong>(40) Question 1—Most influential technology:</strong> Which technology has had the greatest impact on the mentor's career, and why did the mentor identify it as especially important?</label>
+                    <input name="a1" id="a1" type="text" size="500" maxlength="500" class="form-control" placeholder="Identify the technology and explain its importance">
+                </div>
+
+                <input type="hidden" name="q2" id="q2" value="How did that technology change the mentor's tasks, decisions, customers, communication, productivity, responsibilities, or workplace?">
+                <div class="form-group">
+                    <label for="a2"><strong>(40) Question 2—How work changed:</strong> How did that technology change the mentor's tasks, decisions, customers, communication, productivity, responsibilities, or workplace?</label>
+                    <input name="a2" id="a2" type="text" size="500" maxlength="500" class="form-control" placeholder="Describe a concrete change in the work">
+                </div>
+
+                <input type="hidden" name="q3" id="q3" value="How is artificial intelligence affecting the mentor's work or profession today, and how does the mentor expect AI to affect the career over the next several years?">
+                <div class="form-group">
+                    <label for="a3"><strong>(40) Question 3—Artificial intelligence impact:</strong> How is artificial intelligence affecting the mentor's work or profession today, and how does the mentor expect AI to affect the career over the next several years?</label>
+                    <input name="a3" id="a3" type="text" size="500" maxlength="500" class="form-control" placeholder="Summarize current and expected AI impact">
+                </div>
+
+                <input type="hidden" name="q4" id="q4" value="What skills, judgment, adaptability, or professional responsibilities have become more important because technology is changing?">
+                <div class="form-group">
+                    <label for="a4"><strong>(30) Question 4—Changing skills:</strong> What skills, judgment, adaptability, or professional responsibilities have become more important because technology is changing?</label>
+                    <input name="a4" id="a4" type="text" size="500" maxlength="500" class="form-control" placeholder="Identify important changing skills or responsibilities">
+                </div>
+
+                <input type="hidden" name="q5" id="q5" value="What is one specific conclusion from this conversation that should affect how you prepare for your own career?">
+                <div class="form-group">
+                    <label for="a5"><strong>(30) Question 5—Your career takeaway:</strong> What is one specific conclusion from this conversation that should affect how you prepare for your own career?</label>
+                    <input name="a5" id="a5" type="text" size="500" maxlength="500" class="form-control" placeholder="State one specific action or preparation priority">
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="col-lg-12">
+            <a href="#Submission" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="Submission">Assignment Submission</a>
+            <div id="Submission" class="collapse in">
+                <p>Open the published assignment on your course website and confirm that your student information and all five responses are correct.</p>
+                <p><strong>(10) Homepage hyperlink:</strong> Verify that Project3TechnologyImpact.html is linked from your course homepage.</p>
+                <p><strong>(10) Web database submission:</strong> Press the Submit button at the top or bottom and follow the confirmation-page instructions.</p>
+                <div class="alert alert-info" role="note">
+                    Browser-entered responses may not be saved in the webpage. Keep a copy until the submission is confirmed.
+                </div>
+            </div>
+        </section>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit" value="Submit Project 3 Technology Impact" type="submit">
+            <br>
+        </div>
+    </form>
+
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+</body>
+</html>

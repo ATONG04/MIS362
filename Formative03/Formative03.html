@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../../ReadOnly/bootstrap.css" rel="stylesheet">
+    <title>MIS362 Formative03</title>
+</head>
+
+<body class="container-fluid">
+
+    <form class="container-fluid"
+        action="https://eprofessor.azurewebsites.net/codex/ProcessAICall.aspx"
+        method="post"
+        name="frmAssignment"
+        id="frmAssignment">
+
+        <input name="InstID" id="InstID" value="00617282" type="hidden">
+        <input name="assignmentVersion" id="assignmentVersion" value="Formative03-FA2026-v1" type="hidden">
+
+        <textarea id="datasetContext"
+                  name="datasetContext"
+                  readonly
+                  hidden>Assignment: MIS362 Formative03 Blanks, ASCII, and Data Types. Students use Excel to distinguish truly blank cells from cells containing invisible or visible characters, and to compare text and numeric data. The workbook includes IsBlank, Codes, ASCII, and Description worksheets. Business-relevant ASCII characters include null, tab, line feed, carriage return, and space. Students are being introduced to ASCII as a foundation for later database and data-import work. Emphasize differences among human-to-human, human-to-machine, machine-to-human and machine-to-machine communication. Text is primarily used to represent written or spoken meaning, labels, codes, and identifiers; numbers are primarily used for arithmetic and quantitative analysis. However, some values that look numeric, such as ZIP codes, phone numbers, product codes, and IDs, should be stored as text when arithmetic is not meaningful. Evaluate formula accuracy, explanation, verification, interpretation, and business relevance separately. The AI does not receive the workbook, so answers must include the relevant cell, formula, result, and explanation.</textarea>
+
+        <h1 class="text-center">Blanks, ASCII, and Data Types</h1>
+
+        <h2 id="student-info" class="sr-only">Student Information</h2>
+        <div class="row" aria-labelledby="student-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="FirstName">First Name:</label>
+                    <input class="form-control" name="FirstName" id="FirstName" type="text"
+                        readonly aria-readonly="true" autocomplete="given-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="LastName">Last Name:</label>
+                    <input class="form-control" name="LastName" id="LastName" type="text"
+                        readonly aria-readonly="true" autocomplete="family-name">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="StarID">StarID:</label>
+                    <input class="form-control" name="StarID" id="StarID" type="text"
+                        readonly aria-readonly="true" autocomplete="username">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input class="form-control" name="email" id="email" type="email"
+                        readonly aria-readonly="true" autocomplete="email">
+                </div>
+            </div>
+        </div>
+
+        <input name="pin" id="pin" type="hidden">
+
+        <h2 id="course-info" class="sr-only">Course Information</h2>
+        <div class="row" aria-labelledby="course-info">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Semester">Semester:</label>
+                    <input class="form-control" name="Semester" id="Semester" type="text"
+                        readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Class">Class:</label>
+                    <input class="form-control" name="Class" id="Class" type="text"
+                        readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="Section">Section:</label>
+                    <input class="form-control" name="Section" id="Section" type="text"
+                        readonly aria-readonly="true">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label for="assignment">Assignment:</label>
+                    <input class="form-control" name="assignment" id="assignment" type="text"
+                        value="Formative03" readonly aria-readonly="true">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit"
+                value="Submit to the web database, and receive AI feedback" type="submit">
+            <br>
+        </div>
+
+        <div class="col-lg-12 h3 text-danger">
+            180 Points
+            <hr>
+        </div>
+
+        
+        <!-- ========== Hermes Agent Work Context ========== -->
+        <div class="col-lg-12">
+            <a href="#HermesWorkContext" class="btn btn-info" data-toggle="collapse" aria-expanded="true" aria-controls="HermesWorkContext">Hermes Agent Work Context</a>
+        </div>
+        <div id="HermesWorkContext" class="collapse in col-lg-12">
+            <p><strong>Active profile:</strong> use your course-specific Hermes profile <code>mis362</code>.</p>
+            <p><strong>Hermes session:</strong></p>
+            <pre>First use:  /new Formative03
+Return later: /resume Formative03
+When finished using Hermes: /quit</pre>
+            <p><strong>Hermes use is required for one meaningful checkpoint in this assignment.</strong> GenAI02 introduced Hermes Agent, and these early assignments are designed to build the habit of using an agent deliberately without outsourcing the work.</p>
+            <p><strong>Direct Mode:</strong> Use the required course software yourself. Direct Mode may be used for routine mechanical steps, but complete the Hermes checkpoint below at least once.</p>
+            <p><strong>Required Hermes checkpoint:</strong> Ask Hermes to explain two reasonable ways to distinguish a truly blank Excel cell from a cell containing invisible data. Use Excel yourself and manually verify at least one result.</p>
+            <p>Hermes is a coach. It may explain concepts, suggest formulas or methods, and help troubleshoot, but you must perform and verify the hands-on work in the required software. No extra Hermes screenshot or chat transcript is required.</p>
+            <p><strong>Workstation tip:</strong> when useful, keep Hermes Agent open on one monitor and the assignment, browser, Excel, Visual Studio, Access, or other course software on another monitor so you can compare instructions, agent advice, and actual results.</p>
+            <p><strong>Safety and verification:</strong> use only Hermes capabilities you have already configured in the completed GenAI assignments. Do not place passwords, API keys, private information, or restricted data in prompts or course-agent files. Treat agent output as a candidate solution until you verify it with the assignment requirements, source data, calculations, software output, or another appropriate source.</p>
+            <hr />
+        </div>
+
+<div class="col-lg-12">
+            <a href="#Objectives" class="btn btn-info" data-toggle="collapse">Learning Objectives</a>
+        </div>
+        <div id="Objectives" class="collapse in col-lg-12">
+<p>
+    In this assignment, you will use Excel to examine blanks, invisible
+    characters, ASCII codes, text, and numbers as forms of business data.
+</p>
+
+<p>After completing this assignment, you will be able to:</p>
+
+<ol>
+    <li>Distinguish truly blank cells from cells containing visible or invisible data.</li>
+    <li>Apply Excel IS and length functions to test data content and type.</li>
+    <li>Differentiate text used for meaning or identification from numbers used for arithmetic.</li>
+    <li>Explain how ASCII characters support communication between people and machines.</li>
+    <li>Evaluate how missing values, control characters, and incorrect data types affect business systems.</li>
+</ol>            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Resources" class="btn btn-info" data-toggle="collapse">Resources and Help</a>
+        </div>
+        <div id="Resources" class="collapse in col-lg-12">
+            <p>
+                Suggested Hermes prompt (use the <code>mis362</code> profile; the MIS362 course agent remains available as a secondary resource):
+                <br>
+                <code>I am completing MIS362 Formative03. Explain the difference among blank cells, invisible characters, text, numbers, and ASCII control characters. Show a simple Excel solution, then a more advanced solution when useful. You may provide exact formulas, but explain how each formula works and how I can verify the result.</code>
+            </p>
+            <p>
+                The AI does not receive your workbook. Include the relevant cell, formula, result, and explanation in each answer.
+            </p>
+            <p>
+                Verify every AI-assisted formula by inspecting the cell and checking at least one result manually.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Overview" class="btn btn-info" data-toggle="collapse">Assignment Overview</a>
+        </div>
+        <div id="Overview" class="collapse in col-lg-12">
+<p>
+    A cell that appears blank may contain a space, control character, or
+    formula result. A person may see no content while a computer still
+    detects data.
+</p>
+
+<p>
+    This assignment introduces blanks, data types, and ASCII as preparation
+    for later work with databases, imports, validation, and data cleaning.
+</p>
+
+<ul>
+    <li><strong>Human to human:</strong> language, labels, symbols, and context.</li>
+    <li><strong>Human to machine:</strong> data, formulas, forms, commands, and clicks.</li>
+    <li><strong>Machine to human:</strong> results, warnings, charts, prompts, and sounds.</li>
+    <li><strong>Machine to machine:</strong> codes, delimiters, formats, and data types.</li>
+</ul>
+
+<p>
+    Text represents meaning, labels, codes, and identifiers. Numbers support
+    arithmetic and quantitative analysis. Values such as ZIP codes, phone
+    numbers, and product IDs may contain digits but should be stored as text
+    when arithmetic is not meaningful.
+</p>            
+            <p>
+                Download and open <a href="DataTypes.xlsx" class="bg-info text-white">DataTypes.xlsx</a>. Save a working copy as <strong>Formative03.xlsx</strong>.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise01" class="btn btn-info" data-toggle="collapse">Exercise 1 — Truly Blank or Not?</a>
+        </div>
+        <div id="Exercise01" class="collapse in col-lg-12">
+            <ol>
+                <li>Open the <strong>IsBlank</strong> worksheet.</li>
+                <li>In B5, enter <code>=ISBLANK(A5)</code>.</li>
+                <li>Fill the formula down through B11.</li>
+                <li>Compare cells that appear blank with cells containing zero, one, punctuation, one space, or multiple spaces.</li>
+                <li>Use the results to determine which cells are truly empty.</li>
+            </ol>
+
+            <p>
+                <img src="IsBlankWorkSheet.JPG" class="img-responsive img-rounded"
+                    alt="Excel worksheet showing apparently blank and nonblank cells being tested with ISBLANK">
+            </p>
+
+            <div class="form-group">
+                <label for="q1"><strong>1. (10) Question 1</strong></label>
+                <textarea class="form-control" id="q1" name="q1" rows="8" readonly aria-readonly="true">
+On the IsBlank worksheet, report the exact formula entered in B5 and identify which cells in A5:A11 returned TRUE. 
+Explain what TRUE means for ISBLANK and why a cell that looks empty may still return FALSE. 
+Include how you verified the result.</textarea>
+                <br>
+                <label for="a1"><strong>Your answer:</strong></label>
+                <textarea class="form-control" id="a1" name="a1" rows="8" maxlength="3000" placeholder="Type or paste your answer here..."></textarea>
+                <small id="charCount-a1" class="text-muted">0 / 3000 characters</small>
+            </div>
+
+            <div class="form-group">
+                <label for="q2"><strong>2. (10) Question 2</strong></label>
+                <textarea class="form-control" id="q2" name="q2" rows="8" readonly aria-readonly="true">
+Identify one cell in A5:A11 that appears blank but contains data. 
+Report its content, the ISBLANK result, and one business problem that it could cause.</textarea>
+                <br>
+                <label for="a2"><strong>Your answer:</strong></label>
+                <textarea class="form-control" id="a2" name="a2" rows="8" maxlength="3000" placeholder="Type or paste your answer here..."></textarea>
+                <small id="charCount-a2" class="text-muted">0 / 3000 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise02" class="btn btn-info" data-toggle="collapse">Exercise 2 — Text, Numbers, and Data Types</a>
+        </div>
+        <div id="Exercise02" class="collapse in col-lg-12">
+            <p>
+                Review the workbook examples that use functions such as <code>ISTEXT()</code>, <code>ISNUMBER()</code>, <code>LEN()</code>, and related checks.
+            </p>
+<ol>
+    <li>Open the worksheet containing the data-type examples.</li>
+    <li>Complete the provided ISTEXT(), ISNUMBER(), and LEN() formulas.</li>
+    <li>Compare the visible value with the function results.</li>
+    <li>Identify at least one digit-only value that should be treated as text.</li>
+</ol>            <p>
+                Consider why text and numbers serve different business purposes:
+            </p>
+            <ul>
+                <li>Text communicates words, labels, categories, codes, and identifiers.</li>
+                <li>Numbers support arithmetic, comparison, aggregation, forecasting, and analysis.</li>
+                <li>A value that contains only digits is not automatically numeric in business meaning.</li>
+            </ul>
+
+            <div class="form-group">
+                <label for="q3"><strong>3. (20) Question 3</strong></label>
+                <textarea class="form-control" id="q3" name="q3" rows="10" readonly aria-readonly="true">
+Choose one workbook example that distinguishes text from numeric data. 
+Review the cell, its visible value, the Excel function used to test it, and the result. 
+In your answer briefly explain why a business might intentionally store a value that contains only digits as text rather than as a number. 
+</textarea>
+                <br>
+                <label for="a3"><strong>Your answer:</strong></label>
+                <textarea class="form-control" id="a3" name="a3" rows="9" maxlength="3000" placeholder="Type or paste your answer here..."></textarea>
+                <small id="charCount-a3" class="text-muted">0 / 3000 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise03" class="btn btn-info" data-toggle="collapse">Exercise 3 — Business-Relevant ASCII Characters</a>
+        </div>
+        <div id="Exercise03" class="collapse in col-lg-12">
+            <p>
+                Open the <strong>ASCII</strong> and <strong>Codes</strong> worksheets. Focus on characters that commonly affect business data exchange:
+            </p>
+            <ul>
+                <li><strong>Null:</strong> decimal 0</li>
+                <li><strong>Tab:</strong> decimal 9</li>
+                <li><strong>Line feed:</strong> decimal 10</li>
+                <li><strong>Carriage return:</strong> decimal 13</li>
+                <li><strong>Space:</strong> decimal 32</li>
+            </ul>
+            <p>
+                These characters may be invisible or appear only through spacing and line breaks, but software can still detect and process them.
+            </p>
+
+            <div class="form-group">
+                <label for="q4"><strong>4. (50) Question 4</strong></label>
+                <textarea class="form-control" id="q4" name="q4" rows="12" readonly aria-readonly="true">
+Explain the purpose of ASCII. 
+Consider how ASCII supports human-to-machine, machine to human, and machine-to-machine communication, and reflect on the purpose of at least one of these business-relevant characters: null, tab, line feed, carriage return, and space. 
+For the selected character, report its decimal code and explain one way it could affect imported, exported, stored, or displayed business data.</textarea>
+                <br>
+                <label for="a4"><strong>Your answer:</strong></label>
+                <textarea class="form-control" id="a4" name="a4" rows="12" maxlength="3000" placeholder="Type or paste your answer here..."></textarea>
+                <small id="charCount-a4" class="text-muted">0 / 3000 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Exercise04" class="btn btn-info" data-toggle="collapse">Exercise 4 — The Absence of Data Is Information</a>
+        </div>
+        <div id="Exercise04" class="collapse in col-lg-12">
+            <p>
+                Missing data can represent different business conditions. It may mean that:
+            </p>
+            <ul>
+                <li>the value is unknown;</li>
+                <li>the value does not apply;</li>
+                <li>the value has not yet been entered;</li>
+                <li>the event did not occur;</li>
+                <li>the system failed to capture the value;</li>
+                <li>the value was intentionally withheld.</li>
+            </ul>
+
+            <div class="form-group">
+                <label for="q5"><strong>5. (20) Question 5</strong></label>
+                <textarea class="form-control" id="q5" name="q5" rows="10" readonly aria-readonly="true">
+In your answer provide one business example in which the absence of data communicates useful information or knowledge. 
+Consider the business context, what the missing value means, how a person might interpret it, how a computer system might interpret it, and one control that would prevent the missing value from being misunderstood. 
+</textarea>
+                <br>
+                <label for="a5"><strong>Your answer:</strong></label>
+                <textarea class="form-control" id="a5" name="a5" rows="10" maxlength="3000" placeholder="Type or paste your answer here..."></textarea>
+                <small id="charCount-a5" class="text-muted">0 / 3000 characters</small>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#Evidence" class="btn btn-info" data-toggle="collapse">Completion Evidence</a>
+        </div>
+        <div id="Evidence" class="collapse in col-lg-12">
+            <p>Before submitting, confirm that the workbook visibly shows:</p>
+            <ul>
+                <li>ISBLANK results for the required cells;</li>
+                <li>examples that distinguish text from numbers;</li>
+                <li>correct use of data-type or length-checking functions;</li>
+                <li>review of the business-relevant ASCII characters;</li>
+                <li>no formula errors such as <code>#VALUE!</code>, <code>#REF!</code>, or <code>#NAME?</code>.</li>
+            </ul>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#D2LSubmission" class="btn btn-info" data-toggle="collapse">D2L Workbook Submission</a>
+        </div>
+        <div id="D2LSubmission" class="collapse in col-lg-12">
+            <p><strong>(50)</strong> Save and upload <strong>Formative03.xlsx</strong> to the D2L <code>Formative03</code> assignment folder.</p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <a href="#WebSubmission" class="btn btn-info" data-toggle="collapse">Webpage Submission</a>
+        </div>
+        <div id="WebSubmission" class="collapse in col-lg-12">
+            <p><strong>(10) Home Page Hyperlink:</strong> Verify that this assignment is linked from your course home page.</p>
+            <p><strong>(10) Webpage Submission:</strong> Press the Submit button at the top or bottom of this page.</p>
+            <p>
+                The AI receives each question and its corresponding answer. Include the requested cells, formulas, values, and explanations because the workbook itself is not sent to the AI.
+            </p>
+            <p>
+                Review the feedback, correct the workbook or written responses, and resubmit as needed before the deadline.
+            </p>
+            <hr>
+        </div>
+
+        <div class="col-lg-12">
+            <br>
+            <input class="btn btn-danger btn-block btn-lg" name="Submit"
+                value="Submit to the web database, and receive AI feedback" type="submit">
+            <br>
+        </div>
+
+    </form>
+
+    <footer>
+        <div id="licenseInfo" class="col-lg-12 text-muted"></div>
+        <div id="footerText" class="col-lg-12 text-muted"></div>
+    </footer>
+
+    <script src="../../ReadOnly/jquery-1.js"></script>
+    <script src="../../ReadOnly/bootstrap.js"></script>
+    <script src="../studentConstants.js"></script>
+    <script src="../../ReadOnly/courseConstants.js"></script>
+    <script src="../../ReadOnly/domForms.js"></script>
+
+    <script>
+    (function () {
+        function updateCount(id, max) {
+            var box = document.getElementById(id);
+            var count = document.getElementById('charCount-' + id);
+            if (!box || !count) { return; }
+            count.textContent = box.value.length + ' / ' + max + ' characters';
+        }
+
+        for (var i = 1; i <= 5; i++) {
+            (function (id) {
+                var box = document.getElementById(id);
+                if (!box) { return; }
+                var max = parseInt(box.getAttribute('maxlength'), 10) || 3000;
+                updateCount(id, max);
+                box.addEventListener('input', function () {
+                    updateCount(id, max);
+                });
+            })('a' + i);
+        }
+    })();
+    </script>
+
+</body>
+</html>
